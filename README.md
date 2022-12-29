@@ -14,4 +14,5 @@ je m'appelle Soufiyane EL GARA, je suis  un étudiant en ingénierie, et un écr
 - You will find my learning journey/Vous trouverez mon parcours d'apprentissage 
 - You will find a shared document about what I learn in a daily base/Vous trouverez un document partagé sur ce que j'apprends au quotidien
 - Note that in my note taking I mix my language of writing between English and French/Remarque, dans ma prise de notes je mélange ma langue d'écriture entre l'anglais et le Français
+
 ---
