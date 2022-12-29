@@ -16,3 +16,20 @@ je m'appelle Soufiyane EL GARA, je suis  un étudiant en ingénierie, et un écr
 - Note that in my note taking I mix my language of writing between English and French/Remarque, dans ma prise de notes je mélange ma langue d'écriture entre l'anglais et le Français
 
 ---
+
+ - augmenter la taille du [domaine de collision](#collision)  
+ - augmenter la taille de [domaine de broadcast](#broadcast)
+ 
+ ### collision
+
+- c'est quoi le **domaine de collision**?
+  - un ensemble d'entites (carte réseaux) qui partagent le meme média de communication.
+  - c'est comme le principe de talki-walki
+
+### broadcast
+
+- c'est quoi **le domaine de broadcast**?
+  - c'est quant une entie envoi une données, elle a le choix soit en unicast, multucast ou broadcast
+  - **unicast**: communication 1 vers 1.
+  - **broadcast**: communication 1 vers tous.
+  - **multicast**: communication 1 vers plusiers(mais pas tous le monde).
