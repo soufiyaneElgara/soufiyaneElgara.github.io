@@ -1,5 +1,8 @@
 <p style="text-align: center;">🤗 You Are Very Welcome 🤗</p>
 
+ - augmenter la taille du [domaine de collision](#collision)  
+ - augmenter la taille de [domaine de broadcast](#broadcast)
+
 ### How am I ?
 My name is **Soufiyane EL GARA**, I am engineering student, and an amateur writer, I am a full time tech learner, who shares what he learns, I believe in Collaborating and building collective knowledge.
 
@@ -16,9 +19,6 @@ je m'appelle Soufiyane EL GARA, je suis  un étudiant en ingénierie, et un écr
 - Note that in my note taking I mix my language of writing between English and French/Remarque, dans ma prise de notes je mélange ma langue d'écriture entre l'anglais et le Français
 
 ---
-
- - augmenter la taille du [domaine de collision](#collision)  
- - augmenter la taille de [domaine de broadcast](#broadcast)
  
  ### collision
 
