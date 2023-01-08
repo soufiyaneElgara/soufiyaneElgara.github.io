@@ -1,0 +1,156 @@
+# Git
+
+---
+## Content
+
+- [Git](#git)
+  - [Content](#content)
+    - [What is Git❓](#what-is-git)
+    - [Why use Git❓](#why-use-git)
+    - [How Git works❓](#how-git-works)
+    - [What is branches ❓](#what-is-branches-)
+    - [Configuration](#configuration)
+
+---
+
+### What is Git❓
+
+- Git is free and open source for distribution version control.
+- it's a system that records changes to our files over time.
+- Git allows users to track code changes and manage their project using simple commands.
+- we can recally specific version of those files at any given time.
+- many people can easly collaborate on a project and have their ouwn version of project files on their computer.
+  
+### Why use Git❓
+
+- store revisions in a project history in just one directory.
+- rewined on new features in the project i wanted to.
+- work on a new feature without messing up the main codeBase.
+- easly collaborate with other programmers.
+  
+### How Git works❓
+
+- the hart of Git is repository used to contain a project.
+- What is repository ?
+  - A repository is a container for a project you want to track with git.
+  - A repository can allow users to store several different repo's and truck eash one idependently.
+  - can have many different repos's for many different projects on your computer.
+- What is commits ?
+  - Git commit, creats a commit, which is like a snapshot of your repository.
+  - commits are the building blocks of 'savie points' with in git's version control.
+  - this commit are snapshots of your entier repository to a specific times.
+  - you should make new commits often, based around logical unites of change.
+  - over time commits should tell us a story of the history of your repo and how it came to be they way it currently is.
+- what is the commit process ?
+  - the Git committing process requires several steps: moving changes to the staging area and saving them with commit commande
+  - the phases of a commit:
+      1. **Modified**: changed files not commited.
+      2. **Staging**: add any changed files to staging that you want to commit.
+      3. **Commited**: any files in the stagin area are added to the commit when we make one.
+
+### What is branches ❓
+
+- a branch is new/separate version of the main repo.
+- branches allow to work on different parts of a project, without impacting the main branch.
+
+### Configuration
+
+1. some basic commands in git:
+
+```bash
+sudo apt install git #used to insall git on ubuntu.
+git --version #display the version.
+git config --global user.name soufiyane #to set a username to the git.
+git config --gloabal user.email soufiyane@gmail.com #to set an email to git.
+git config user.name  #display the username.
+git config user.email #dispaly the email.
+
+```
+
+1. How to create and manuplate repos ?
+
+- create a new repo:
+
+```bash
+mkdir my-project` #create a folder for the project
+cd my-project #go to the folder
+git init #intialize a new, empty repo here
+
+```
+
+- How to commit a change ?
+
+```bash
+git add filename #add the changed file to the staged phase
+git add #add all files to the staging phase
+git rm --cach filename #to remove a file from the stage phase
+git status #display the status file in stage phase(if add or not)
+git commit -m "describ the current commit" #now you'r committing, with a discription message
+git log #display all the commits in the long format
+git log --oneline #display all the commits in a concise format
+```
+
+- How to back and change the commits ?
+
+1. checkout a commit : veiw the commits without changing enething (read only)
+
+```bash
+git checkout 3243FFD #view the all the commits specific time, without cediting(read only)
+
+ ```
+
+1. revert a commit: baseclly it can modify a commit, but it creates a new one, withe the new or delated feature
+
+```bash
+git revert 233EDS #the reverted comit steel in log
+```
+
+1. reset a commit: it means deleting the commit for good
+   1. deleting the commit, with the possiblilty to recover
+
+```bash
+git reset 3242ffs #stell we have the changing in the working area, to recover:
+    git add . 
+    git commit -m "undo the reset"
+```
+
+   1. deleting for good(no chance to recover)
+
+```bash
+git reset 12131 -- hard #remove the commit defentlly
+```
+
+1. How to manipulate branches:
+
+- move d
+
+```bash
+git bransh feature-1 #create a new branch
+git branch -a #display all the branches
+git checkout feature-1 #switch to a specific branch
+```
+
+- How to delete a branch?
+
+```bash
+git checkout master # you should move to master/main first
+git branch -d feature-1 # delete a marged branch
+git branch -D feature-1 # delete un marged branch
+
+```
+
+- How to marge a branch?
+
+```bash
+git checkout master #move to the branch that you want to marge in to it
+git marge feature-1 #marge the feature 1 to master branch
+```
+  
+- What is conflict?
+  - an example of a conflit, when you make a new brach for new feature, then after you a guy modifies in the master branch, then you need to help Git to decide which modification to keep
+
+```bash
+git marge feature-1 #pops an error, you need modifie the code
+git add . #add to stagin erea
+git commit` #make a commit witout a name(:wq, if a bash file is popeds)
+```
