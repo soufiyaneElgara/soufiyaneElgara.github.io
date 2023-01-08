@@ -33,4 +33,4 @@ Soufiyane EL GARA, est un étudiant en ingénierie, et un écrivain amateur, il 
 
 ### What to expect from this site ❓
 
-- clik [her](0000) to discover
+- clik [her](0000.md) to discover
