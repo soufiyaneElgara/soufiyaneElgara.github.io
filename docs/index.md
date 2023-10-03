@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Welcome!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<div align="center">Hi 👋, My name is Soufiyane EL GARA</div>
 
-## Commands
+<div style="font-weight: bold; text-align: center;"> 
+Software Engineer
+</div> 
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+* I'm a software engineer with a passion for coding and problem-solving.
+* 🌍 I'm based in Rabat, Morocco
+* ✉️ You can contact me at :
+  * [soufiyaneelgara@gmail.com](mailto:soufiyaneelgara@gmail.com) 
+  * [soufiyane@proton.me](soufiyane@proton.me)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+  
