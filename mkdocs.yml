@@ -1,0 +1,70 @@
+site_name: SoufiyaneElgara's secund brain 
+site_url: https://soufiyaneelgara.github.io/
+repo_url: https://github.com/soufiyaneElgara/soufiyaneElgara.github.io
+repo_name: soufiyaneElgara/soufiyaneElgara.github.io
+copyright: Copyright &copy; 2022 - 2023 Soufiyane ElGARA
+
+dev_addr: '0.0.0.0:8000'
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.saneheaders
+  - pymdownx.betterem
+  - footnotes
+  - toc:
+      permalink: "#"
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rwxrob/skilstak
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/rwxrob
+    - icon: fontawesome/brands/twitch
+      link: https://twitch.tv/rwxrob/about
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/mhpPfs69Ev
+
+
+theme:
+  name: material
+  logo:  assets/logo.png
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.instant
+      #    - navigation.expand
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+  search:
+    lang:
+      - en
+      - ru
+  font:
+    text: Work Sans
+
+
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
