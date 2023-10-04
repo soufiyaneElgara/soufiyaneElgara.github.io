@@ -27,7 +27,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/soufiyaneElgara/
+      link: https://github.com/soufiyaneElgara
     - icon: fontawesome/brands/youtube
       #link: https
     - icon: fontawesome/brands/twitch
