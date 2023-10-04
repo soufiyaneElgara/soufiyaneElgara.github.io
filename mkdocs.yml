@@ -27,13 +27,13 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https:
+      link: https://github.com/soufiyaneElgara/
     - icon: fontawesome/brands/youtube
-      link: https
+      #link: https
     - icon: fontawesome/brands/twitch
-      link: https
+      #link: https
     - icon: fontawesome/brands/discord
-      link: https
+      #link: https
 
 
 theme:
