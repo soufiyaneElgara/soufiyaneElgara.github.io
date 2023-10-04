@@ -27,13 +27,13 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/rwxrob/skilstak
+      link: https:
     - icon: fontawesome/brands/youtube
-      link: https://youtube.com/rwxrob
+      link: https
     - icon: fontawesome/brands/twitch
-      link: https://twitch.tv/rwxrob/about
+      link: https
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/mhpPfs69Ev
+      link: https
 
 
 theme:
