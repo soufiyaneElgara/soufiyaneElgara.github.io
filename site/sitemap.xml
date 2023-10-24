@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://soufiyaneelgara.github.io/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-10-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://soufiyaneelgara.github.io/book-summaries/Book1%3A/LearnHowToFriends/</loc>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://soufiyaneelgara.github.io/linux/learn-Git-and-Github/git/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://soufiyaneelgara.github.io/linux/learn-Git-and-Github/github/</loc>
-         <lastmod>2023-10-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://soufiyaneelgara.github.io/methodologies/READEME/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
