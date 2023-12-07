@@ -1,4 +1,4 @@
-# Welcome!
+# Who Am I ? 🤔
 
 ## About Me: Innovative Software Engineer|Expert in React, Node.js, MongoDB|Linux Enthusiast
 
@@ -33,7 +33,7 @@ I offer more than just technical skills; I bring a holistic approach software en
 Feel free to reach out, and let's embark on a journey of innovations and collaboration development together!
 
 
-* 🌍 I'm based in Rabat, Morocco
+* 🌍 I'm based in Rabat, Morocco 🇲🇦 
 * ✉️  soufiyaneelgara@gmail.com 
 
   
