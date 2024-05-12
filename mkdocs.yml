@@ -1,8 +1,8 @@
-site_name: soufiyaneElgara.Blog 
+site_name: Soufiyane El GARA 
 site_url: https://soufiyaneelgara.io/
 repo_url: https://github.com/soufiyaneElgara/soufiyaneElgara.github.io
-repo_name: soufiyaneElgara/soufiyaneElgara.github.io
-copyright: Copyright &copy; 2022 - 2023 Soufiyane ElGARA
+repo_name: 
+copyright: Copyright &copy; 2023 - 2024 Soufiyane EL GARA
 
 dev_addr: '0.0.0.0:8000'
 
@@ -35,10 +35,26 @@ extra:
     - icon: fontawesome/brands/discord
       #link: https
 
-
+nav:
+  - About Me: 'index.md'
+  - Blog Posts:
+    - 'Book summaries':
+       - 'Learn How To Winn Friends And Influence Peope': 'book-summaries/book1-LearnHowToWinFriendsAnsInflunecePeople.md' 
+       - 'Learn How To learn': 'book-summaries/book2-learnHowToLearn.md'
+    - 'Essential Tools': 
+       - 'git': 'tools/git.md' 
+       - 'gitHub': 'tools/github.md'
+    - 'Linux': 
+       - 'Linux Wisdom': 'linux/linuxWisdom.md' 
+       - 'Tmux': 'linux/tmux.md'
+       - 'Vi': 'linux/vi.md'
+ 
+  - Projects:
+    - 'Project 1': 'projects/projet1.md'
+ 
 theme:
-  name: material
-  logo:  assets/logo.png
+  name: readthedocs
+  #logo: assets/logo.png
   features:
     - navigation.sections
     - navigation.footer
