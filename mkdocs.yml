@@ -48,7 +48,8 @@ nav:
        - 'Linux Wisdom': 'linux/linuxWisdom.md' 
        - 'Tmux': 'linux/tmux.md'
        - 'Vi': 'linux/vi.md'
- 
+  - Teaching English:  
+    - 'Guideline': 'teachingEnglish/guideLine.md'
   - Projects:
     - 'Project 1': 'projects/projet1.md'
  
