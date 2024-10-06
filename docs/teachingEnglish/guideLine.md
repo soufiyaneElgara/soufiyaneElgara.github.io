@@ -9,7 +9,8 @@
 
 1. Reading: **Lesson 1**: <a href="https://drive.google.com/file/d/1ojfLNJBffSVb417qO4nE0rrBi1NyAV6_/view?usp=sharing" target="_blank">Click here to download the reading text</a>
 1. Vocabulary:  **Book 1**: <a href="https://drive.google.com/file/d/1hNFIFcbahATSbUhyV8-44BKaTfjq5sAe/view?usp=sharing" target="_blank">Click here to download the vocabulary book</a> 
-1. ALC (American Language Course): **Book 1**: <a href="https://drive.google.com/file/d/1_sywDmHrYqsCuJPlCNzOIF8t77oEOmyB/view?usp=sharing" target="_blank">Click here to download the ALC 1</a> 
+1. ALC (American Language Course): **Book 10**: <a href="https://drive.google.com/file/d/1nqkkMXSq8e13Htc_59jn9wa9AFBdQjav/view?usp=sharing" target="_blank">Click here to download the ALC 10</a> 
+
 
 ## Tasks to do for the next session 
  
