@@ -1,3 +1,67 @@
+# Session 2: 0.11.2024
+
+## First 01 Hour
+
+1. Introductions
+   * How was your week?
+   * Did you make search on `Anki`? Did you install it (phone/pc)?
+   * What do think about this tool, I mean the whole concept of It?
+   * What about the listening ? Did you listen every day? (did you fell bored after 3 days hhh ?)
+
+1. Review what we saw last week:
+  * Methods of learning:
+    * Did you change your phone language ?
+    * What we sad about the percentage of listening in acquiring a new language? 70 and 90%
+1. Briefing (15min)
+   * Are you ready for the briefing?
+   * What are you gonna talk about?
+
+1. Reading (30 min or more)
+   * Read 3 times 
+Answer this questions 
+   1. Is Sara working now?No she is not working now she retired
+   1. How long had Sara worked , at her job? 23 years.
+   1. When did she retired ? Recently retired
+   1. Where did retired from, or what she retired from? from her job from 23 Years
+   1. Does Sara now have a lot of money? No she doesn't have a lot of money.
+   1. Did Sara used to have more money? Yes , in the past, she used to have more money.
+   1. Does Sara have money for her self and for other people?No, just for her self
+   1. What is Sara's problem ? She has Two sons.
+   1. Does Sara have enough money for her tow boys ? No, she doesn't because she is retired .
+   1. Who the old is the oldest son? He is 26 years old.
+   1. How old is the youngest son ?He is 23 years old.
+   1. Do `Toney` and `Dan` help Sara to clean the house ? No never, only Sara clean the house 
+   1. Do `Toney` and `Dan` give money to her mom? No, never.
+   1. Do the boys do any chores at all? No they never do any chores.
+   1. Why the boys rent and rave ? Because their mom is kicking out of the house .
+
+1. What do you think about men who get married and steel living with their parents ?
+1. In your opinion, what are the things that tells (a mam or woman) you are ready to get married,   is it the age or other things? 
+1. In your opinion What are the reasons poor people have kids(and why they have many), and whet are the reasons rich people have kids? 
+
+
+
+## Second 02 Hour
+1. Book
+1. For the vocabulary book
+   * Read and explain, and if you find a new word put it in the Anki 
+
+1. Either vs neither?
+## Third 03 Hour
+1. Grammar
+   1. Aspect and tenses 
+   2. Simple present and present continuous
+Ex
+## Forth 04 Hour
+1. Discussion : ""
+1. Home work
+   * Put the learned vocabulary from the reading in you Anki. 
+
+
+
+
+
+
 # Session 1: 05.11.2024
 
 ---
