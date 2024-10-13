@@ -50,6 +50,13 @@ nav:
        - 'Vi': 'linux/vi.md'
   - Teaching English:  
     - 'Guideline': 'teachingEnglish/guideLine.md'
+    - Grammar:
+      - Tenses: 
+         - 'Aspects': '././teachingEnglish/grammar/tenses/aspect.md'
+         - 'Simple Present': '././teachingEnglish/grammar/tenses/simplePresent.md'
+         - 'Present Continuous': '././teachingEnglish/grammar/tenses/presentContinuous.md'
+         - 'Simple Past': '././teachingEnglish/grammar/tenses/simplePast.md'
+    
   - Projects:
     - 'Project 1': 'projects/projet1.md'
  
