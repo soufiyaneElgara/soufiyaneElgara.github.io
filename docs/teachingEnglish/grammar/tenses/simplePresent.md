@@ -4,127 +4,168 @@
 
 ---
 
-1. What is Present Simple Tense?
+1. What is <u>**Present Simple Tense**</u>?
 
-The present simple (also known as the 'simple present', or present indefinite ) is one of the most common tenses in the English. It is used to talk about facts, habits, fixed situations, routine, actions or situation that are "regular" or "always true", in general talk about present time, also the present simple tense is considered the root of the verb without any ending (except int the third-person singular he/sh/it).
+The present simple (also known as the **simple present**, or **present indefinite** ) is one of the most common tenses in the English. It is used to talk about *facts*, *habits*, *fixed situations*, *routine*, *actions* or *situation* that are **regular** or **always true**, in general talk about present time, also the present simple tense is considered the root of the verb without any ending (except int the third-person singular he/sh/it).
 
 ## Structure
 
- Present simple tense is formed by using the base form of the verb, with an 's' or 'es' added for third-person singular (he, she, it), ex:
-I work
-he/she/it works
-we work
-they work
+* Present simple tense is formed by using the base form of the verb, with an `s` or `es` added for **third-person singular** (he, she, it)
 
-1. For the Regular verbs  
+	!!! Example
+		* I work
+		* he/she/it work`s`
+		* we/they work
 
-* In the simple present tense, the third-person form (he, she, it) of most verbs is formed by adding 's' to the base form of the verb. For example:
-    * eat --> eats
-    * walk --> walks
-    * run --> runs 
+1. For the <u>**Regular verbs**</u>  
 
-* If a verb ends in 'ch', 'ss', 'sh', 'x', 'zz' or 'o', add 'es' instead of 's'
-    * watch --> watches
-    * wash --> washes
-    * mix --> mixes
-    * do --> does (because it's considered irregular verb)
-    * go -- > goes
-    * echo --> echoes
-    * potato --> potatoes 
-* If a verb ends in a 'consonant + y', change 'y' to 'i' and then add 'es'
-    * study --> studies
-    * hurry --> hurries 
+* In the simple present tense, the third-person form (he, she, it) of most verbs is formed by adding `s` to the base form of the verb. 
 
-* If the verb ends in a 'vowel + y', just add 's'
-    * pay --> pays
-    * enjoy --> enjoys 
+	!!!example
+    	* eat --> eat`s`
+    	* walk --> walk`s`
+    	* run --> run`s` 
+
+* If a verb ends in `ch`, `ss`, `sh`, `x`, `zz` or `o`, add **`es`** instead of `s`
+
+	!!!Example
+    	* watch --> watch`es`
+    	* wash --> wash`es`
+    	* mix --> mix`es`
+    	* do --> do`es`
+    	* go --> go`es`
+    	* echo --> echo`es`
+
+* If a verb ends in a `consonant + y`, change `y` to `i` and then add `es`
+
+	!!!Example
+    	* study --> stud`ies`
+    	* hurry --> hurr`ies` 
+
+* If the verb ends in a `vowel + y`, just add `s`
+
+	!!!Example
+    	* pay --> pay`s`
+    	* enjoy --> enjoy`s` 
 
 
-1. For the irregular verbs (Auxiliary verbs) 
-Since 'to be', 'to have' and 'to go' are auxiliary verbs, it takes different forms for different subjects:
-    * to be :
-         * I am
-	 * you are
-	 * he/she/it is
-	 * we are
-	 * they are
-    * to have
-         * I have
-	 * you have
-	 * he/she/it has
-	 * they have
-    * To do
-         * I do
-	 * you do
-	 * he/she/it does
-	 * they do
+1. For the **irregular verbs** (***Auxiliary verbs***) 
+
+* Since *to be*, *to have* and *to go* are auxiliary verbs, it takes different forms for different subjects:
+    
+	!!!toBe 
+		* I am
+		* you are
+		* he/she/it is
+		* we are
+		* they are
+    
+	!!!toHave
+         	* I have
+	 	* you have
+	 	* he/she/it has
+	 	* they have
+    
+	!!!ToDo
+         	* I do
+			* you do
+	 		* he/she/it does
+	 		* they do
+
 
 ## Negation
 
-* To make a negative sentence, add 'do not' (don't) or 'does not' (doesn't) before the base form of verbs, examples:
-    * I go to school --> I do not go to school/I don't go to school
-    * You work --> You do not work/ You don't work
-    * She runs --> She does not run/ She doesn't run
+* To make a negative sentence, **add** `do not` (`don't`) or `does not` (`doesn't`) **before** the <u>*base form of verbs*</u>.
 
-* To negate a 'to be' verb, simply add 'not' after it. For example:
-    * I am a student  --> I am not a student 
-    * You are a student --> You are not a student/you aren't a student 
-    * He/she is a student --> He/she is not a student/He or she isn't a student 
+	!!!Examples
+    	* I go to school --> I `do not` go to school/I `don't` go to school
+    	* You work --> You `do not` work/ You `don't` work
+    	* She runs --> She `does not` run/ She `doesn't` run
+
+* To negate a ***`to be`*** verb, simply *add* `not` after it. 
+
+	!!!Example
+    	* I am a student  --> I `am not` a student 
+    	* You are a student --> You `are not` a student/you `aren't` a student 
+    	* He/she is a student --> He/she `is not` a student/He or she `isn't` a student 
 
 
 ## Questioning 
-* To make a 'yes/no question', use 'do/does + subject + the base form of the verb' at the beginning of the sentence, examples:
-    * I run  --> Do I run?
-    * You run --> Do you run?
-    * He goes to school --> Does he go to school?
-* You can make 'wh- questions' by starting the sentence with wh-word and then using do/does. The subject comes next, flowed by the main verb.
-    * I want to eat lunch at the Ledbury --> Where do you want to eat lunch?
-* If the main verb of the sentence is 'to be', the question form is made by putting the verb at the beginning of the sentences and putting the subject after it, examples:
-    * I am happy       ---> Am I happy?
-    * You are a doctor ---> Are you a doctor?
-    * He is nice       ---> Is he nice?
+
+* To make a **yes/no** question, use `do/does` **+** `subject` **+** the `base form` of the `verb` at the beginning of the sentence.
+
+	!!!Example
+    	* I run  --> Do I run?
+    	* You run --> Do you run?
+    	* He goes to school --> Does he go to school?
+
+* You can make **wh- questions** by starting the sentence with **wh-word** and then using `do/does`. The subject comes next, flowed by the main verb.
+
+	!!!Exampel
+    	* I want to eat lunch at the Ledbury --> Where do you want to eat lunch?
+
+* If the main verb of the sentence is **`to be`**, the question form is made by <u>putting the verb at the beginning of the sentences and putting the subject after it</u>
+
+	!!!Example
+    	* I am happy --> Am I happy?
+    	* You are a doctor --> Are you a doctor?
+    	* He is nice       --> Is he nice?
 
 ## Uses 
 
 The simple present tense is used to: 
 
-1. Talk about facts/General Facts:
-We use the present simple when something is generally or always true. It meas you cannot change them. When we say someone is dead we cannot change this fact at all. Remember general fact can refer to scientific facts, or things that cannot be changed easily:
-    * Mary has a twin sister.
-    * The earth is round.
-    * Babies cry when they are hungry.
-    * If you don't water your plant, it dies.
-    * Water freezes at zero degrees.
-    * The Earth revolves around the Sun.
+#### Talk about facts/General Facts:
+
+* We use the present simple when something is **generally** or **always true**. It means you cannot change them. When we say someone is dead we cannot change this fact at all. Remember general fact can refer to *scientific facts*, or *things that cannot be changed easily*
+
+	!!!Examples
+    	* Mary has a twin sister.
+    	* The earth is round.
+    	* Babies cry when they are hungry.
+    	* If you don't water your plant, it dies.
+    	* Water freezes at zero degrees.
+    	* The Earth revolves around the Sun.
 
 
-1. Talks about routines 
-    * Mary goes to school every day.
-    * I wash the dishes after dinner every night. 
+#### Talks about routines 
+    
+* Mary goes to school every day.
+* I wash the dishes after dinner every night. 
 
-1. Hobbies 
-Anther use of the simple present tense is to talk about 'hobbies'. Hobbies are activities that we do in our free time, ex: 
-    * I read a book in my break time at school.
-    * Whenever she is free, she goes to the gym
-    * I swim in the pool whenever I am bored
-    * She cooks different types of soups on Mondays.
+#### Hobbies 
 
-1. Talk about what we like and we dislike 
-The simple present tense is used to express our likes and dislikes, such as talking about our favorite things or expressing preferences. Some verbs that are commonly used to express likes and dislikes include "don't like", "dislike", "hate", "abhor", "can't", "bear", "detest", "like", "love", and "enjoy":
-    * He likes to become a guitarist.
-    * I don't like to wake up early at all. 
-    * I love playing the piano.
-    * I can't bear cheese.
+* Anther use of the simple present tense is to talk about **hobbies**. Hobbies are activities that we do in our free time.
 
-1. Stative verbs
-We use the present simple with stative verbs like : be, believe, belong, hate, hear, like, love, mean, prefer, remain, realize, seem, smell, think, understand, want, wish. Normally, these verbs are not used in the present  continuous form, ex:
-    * She believes in God so much .
-    * They think English is easy .
-    * She believes in the afterlife.
+	!!!Example 
+    	* I read a book in my break time at school.
+    	* Whenever she is free, she goes to the gym
+    	* I swim in the pool whenever I am bored
+    	* She cooks different types of soups on Mondays.
+
+#### Talk about what we like and we dislike 
+
+* The simple present tense is used to express our likes and dislikes, such as talking about our favorite things or expressing preferences. Some verbs that are commonly used to express likes and dislikes include *don't like*, *dislike*, *hate*, *abhor*, *can't*, *bear*, *detest*, *like*, *love*, and *enjoy*
+
+	!!!Example
+    	* He likes to become a guitarist.
+    	* I don't like to wake up early at all. 
+    	* I love playing the piano.
+    	* I can't bear cheese.
+
+#### Stative verbs
+
+* We use the present simple with stative verbs like : *be*, *believe*, *belong*, *hate*, *hear*, *like*, *love*, *mean*, *prefer*, *remain*, *realize*, *seem*, *smell*, *think*, *understand*, *want*, *wish*. Normally, these verbs are not used in the present continuous form.
+
+	!!!example
+    	* She believes in God so much .
+    	* They think English is easy .
+    	* She believes in the afterlife.
 
 
-1. State of being
-State verbs in English are used to describe a state of being and are often used in the preset simple tense. In addition, linking verbs in the simple present tense can also be used to describe 'emotions' or 'mental states':
+#### State of being
+
+* State verbs in English are used to describe a state of being and are often used in the preset simple tense. In addition, linking verbs in the simple present tense can also be used to describe 'emotions' or 'mental states':
     * I am happy right now (the sentence is about how we are feeling)
     * She isn't angry anymore.
     * He feels terrible about the date.
@@ -205,7 +246,8 @@ We use this structure to refer to a future event which is actually in the simple
 
 
 ##  Common time Expressions
-1. Frequency adverbs:
+
+##### Frequency adverbs:
    * always
    * usually
    * often
@@ -216,20 +258,22 @@ We use this structure to refer to a future event which is actually in the simple
    * Rarely
    * Hardly ever
 
-1. Phrases Indicating regularity:
+##### Phrases Indicating regularity:
    * Every day/week/month/year
    * Once a day/week/month/year
    * Twice a day/week/month
    * Three times a day/week/month/year
    * On Mondays/Tuesdays/etc
-1. General Time Expressions
+
+##### General Time Expressions
    * In the morning/afternoon/evening
    * At night
    * At the weekend/On the weekend
    * At noon
    * At sunrise/sunset
    * On weekdays
-1. Other common Expressions:
+
+##### Other common Expressions:
    * Whenever
    * Nowadays
    * All the time

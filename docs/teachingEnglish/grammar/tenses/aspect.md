@@ -43,6 +43,7 @@ Verbs have four aspects: simple, perfect, progressive, and perfect progressive.
 #### Perfect progressive aspect
 
 * Perfect progressive aspect expresses a past ongoing action that may be complete or incomplete before another suggested or identified time:
+
 	!!! Example
 		Jameson has been practicing shooting baskets to prepare for tonight's game.
 
@@ -52,10 +53,10 @@ Verbs have four aspects: simple, perfect, progressive, and perfect progressive.
 
 * Within these condensed classifications, **simple**, and **perfect aspect** would fall under **perfective aspect**, and **progressive** and **perfect progressive** aspect would be grouped with **imperfective aspect**. 
 
-* Perfective aspect (simple, perfect) signifies an action with a ***sense of completion or containment***.
+* <u>**Perfective aspect** </u> (simple, perfect) signifies an action with a ***sense of completion or containment***.
 
 	!!! Examples
 		has practiced, had practiced, will have practiced. 
 		(It does not convey a low or extension of time or maintained activity) 
 
-* Imperfective aspect (progressive, perfect progressive) describes an action that continues or repeats within its tense: is practicing, was practicing, had been practicing. It applies to events that are happening, have happened, or will happen.
+* <u>**Imperfective aspect**</u> (progressive, perfect progressive) **describes an action that continues or repeats** within its tense: is practicing, was practicing, had been practicing. It applies to events that are happening, have happened, or will happen.

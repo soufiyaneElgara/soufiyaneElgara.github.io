@@ -10,11 +10,13 @@
 
 1. Review what we saw last week:
   * Methods of learning:
-    * Did you change your phone language ?
+    * Did you change your phone language?
     * What we sad about the percentage of listening in acquiring a new language? 70 and 90%
+
 1. Briefing (15min)
    * Are you ready for the briefing?
-   * What are you gonna talk about?
+   * What are you going talk about?
+
 
 1. Reading (30 min or more)
    * Read 3 times 
@@ -45,8 +47,27 @@ Answer this questions
 1. Book
 1. For the vocabulary book
    * Read and explain, and if you find a new word put it in the Anki 
+   * bill vs coins:
+   * hotel vs motel: 
+   * clerk: is someone who works in office and does paper works.
+   * Knob : a small handle (like radio)
+   * lever: levier
+   * nuts: dry fruits
+     * almond: `لوز`
+     * walnut: `grga3`
+     * cashew: `akajou`
+     * pistachio: `foustou9 or pistach`
+   * dispense: to get rid off
+   * Tray vs try (plateau/essay)
+   * sold out: épuisé 
+   * out of order: en panne 
+   * give out: donner
+   * dispenses : يوزع
 
 1. Either vs neither?
+
+
+
 ## Third 03 Hour
 1. Grammar
    1. Aspect and tenses 
@@ -54,6 +75,8 @@ Answer this questions
 Ex
 ## Forth 04 Hour
 1. Discussion : ""
+
+
 1. Home work
    * Put the learned vocabulary from the reading in you Anki. 
 
