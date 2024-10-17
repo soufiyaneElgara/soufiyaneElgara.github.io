@@ -21,7 +21,7 @@
 ### Topic covered 
 1. Vocabulary: related **Vending Machines**
 1. Grammar: 
-	* Using ***how to-infinitive*** 
+	* Using how to-infinitive [go to the lesson](grammar/tenses/howToInfinitive.md) 
 	* Aspect & tenses [go to the lesson](grammar/tenses/aspect.md) 
 	* Simple Present  [go to the lesson](grammar/tenses/simplePresent.md) 
 	* Simple Past [go to the lesson](grammar/tenses/simplePast.md) 
