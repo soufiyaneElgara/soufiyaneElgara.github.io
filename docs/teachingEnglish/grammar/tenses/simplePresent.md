@@ -19,14 +19,14 @@ The present simple (also known as the **simple present**, or **present indefinit
 
 1. For the <u>**Regular verbs**</u>  
 
-* In the simple present tense, the third-person form (he, she, it) of most verbs is formed by adding `s` to the base form of the verb. 
+	* In the simple present tense, the third-person form (he, she, it) of most verbs is formed by adding `s` to the base form of the verb. 
 
 	!!!example
     	* eat --> eat`s`
     	* walk --> walk`s`
     	* run --> run`s` 
 
-* If a verb ends in `ch`, `ss`, `sh`, `x`, `zz` or `o`, add **`es`** instead of `s`
+	* If a verb ends in `ch`, `ss`, `sh`, `x`, `zz` or `o`, add **`es`** instead of `s`
 
 	!!!Example
     	* watch --> watch`es`
@@ -36,13 +36,13 @@ The present simple (also known as the **simple present**, or **present indefinit
     	* go --> go`es`
     	* echo --> echo`es`
 
-* If a verb ends in a `consonant + y`, change `y` to `i` and then add `es`
+	* If a verb ends in a `consonant + y`, change `y` to `i` and then add `es`
 
 	!!!Example
     	* study --> stud`ies`
     	* hurry --> hurr`ies` 
 
-* If the verb ends in a `vowel + y`, just add `s`
+	* If the verb ends in a `vowel + y`, just add `s`
 
 	!!!Example
     	* pay --> pay`s`
@@ -51,7 +51,7 @@ The present simple (also known as the **simple present**, or **present indefinit
 
 1. For the **irregular verbs** (***Auxiliary verbs***) 
 
-* Since *to be*, *to have* and *to go* are auxiliary verbs, it takes different forms for different subjects:
+	* Since *to be*, *to have* and *to go* are auxiliary verbs, it takes different forms for different subjects:
     
 	!!!toBe 
 		* I am
@@ -62,9 +62,9 @@ The present simple (also known as the **simple present**, or **present indefinit
     
 	!!!toHave
          	* I have
-	 	* you have
-	 	* he/she/it has
-	 	* they have
+		 	* you have
+		 	* he/she/it has
+	 		* they have
     
 	!!!ToDo
          	* I do
@@ -92,7 +92,7 @@ The present simple (also known as the **simple present**, or **present indefinit
 
 ## Questioning 
 
-* To make a **yes/no** question, use `do/does` **+** `subject` **+** the `base form` of the `verb` at the beginning of the sentence.
+* To make a **yes/no** question, use `do/does` **+** `subject` **+** the <u>`base form`</u> of the `verb` at the beginning of the sentence.
 
 	!!!Example
     	* I run  --> Do I run?
@@ -163,86 +163,140 @@ The simple present tense is used to:
     	* She believes in the afterlife.
 
 
-#### State of being
+#### State of being (feelings)
 
-* State verbs in English are used to describe a state of being and are often used in the preset simple tense. In addition, linking verbs in the simple present tense can also be used to describe 'emotions' or 'mental states':
-    * I am happy right now (the sentence is about how we are feeling)
-    * She isn't angry anymore.
-    * He feels terrible about the date.
-    * I am happy to see you honey.
+* State verbs in English are used to describe a state of being and are often used in the preset simple tense. In addition, linking verbs in the simple present tense can also be used to describe **emotions** or **mental states**.
 
-1. Schedules and Timetables (Future plans)
-Another use of the simple present tense is to talk about events in the future that are fixed or jest events that occur at fixed times, Ex:
-    * The plan leaves at 7:30 in the morning
-    * He gives a lecture at 8:00
-    * The exam starts at 10:00 am
-    * The bus leaves at 8:05 this morning.
+	!!!Example
+		* I am happy right now (the sentence is about how we are feeling)
+    		* She isn't angry anymore.
+    		* He feels terrible about the date.
+    		* I am happy to see you honey.
 
-1. Talk about our jobs
-When we want to talk about our jobs, we can also use the simple present ex:
-    * I work at a cafe. 
-    * She is a hotel manager.
 
-1. Repeating actions or habits
-Present simple tense, is also used to talk about frequent actions in the present time. In this case, we use the following adverbs of frequency for more clarification:
-    * I usually drink tea at 5 pm.
-    * Maria is always late for the art class
-    * She never sleeps at 10.
-    * I pay tennis every Tuesday.
+#### Schedules and Timetables (Future plans)
+
+* Another use of the simple present tense is to talk about <u>*events in the future*</u> that are **fixed** or just events that occur at **fixed times**.
+
+	!!!Example
+    	* The plan leaves at 7:30 in the morning
+    	* He gives a lecture at 8:00
+    	* The exam starts at 10:00 am
+    	* The bus leaves at 8:05 this morning.
+
+#### Talk about our jobs
+
+* When we want to talk about our jobs, we can also use the simple present.
+
+	!!!Example
+    	* I work at a cafe. 
+    	* She is a hotel manager.
+
+
+#### Repeating actions or habits
+
+* Present simple tense, is also used to talk about **frequent actions** in the *present time*. In this case, we use adverbs of frequency for more clarification:
+
+	!!!Exmple
+    	* I usually drink tea at 5 pm.
+    	* Maria is always late for the art class
+    	* She never sleeps at 10.
+    	* I play tennis every Tuesday.
  
-1. Spots commentary
-The present simple tense is also used in sports commentary to describe short actions that are completed as soon as they happen. It's important to remember that these actions occur in a brief of time. If the actions are ongoing or take place over a longer duration, we should not use the simple present tense, ex:
-    * He shoots and he scores!
-    * Here's Jackson back to throw ... and down he goes, as Gabe wilkins gets there.
+#### Spots commentary
 
-1. Narration
-We can use the present simple tense to talk about the past when we are telling a story. In this case, you have to keep in mind that the story took place in the past, but you are narrating it in the present, Ex:
-    * The other day I was watching TV when suddenly Terry calls me and tells me he needs money.
+* The present simple tense is also used in *sports commentary* <u>to describe short actions that are completed as soon as they happen</u>. It's important to remember that these actions **occur** in a **brief of time**. If the actions are ongoing or take place over a longer duration, we should not use the simple present tense.
 
-1. Summarizing Movies, Books, etc
-Whenever you want to talk about a film or a book after reading it or watching it. You have to use the present simple tense as you use it for narrating stories
-    * Frodo lives in the Shire. He has a best friend called Sam.
+	!!!Example
+    	* He shoots and he scores!
+    	* Here's Jackson back to throw ... and down he goes, as Gabe wilkins gets there.
 
-1. Instructions and Directions
-We use the present simple when we are giving instructions or directions. We often use ordering words, such as 'and', 'first' and 'then', Ex:
-   * First, take a right. After that turn left. Then go straight. 
+#### Narration
 
-1. I promise, I swear, I agree (Speech Act Verbs)
-We use the present simple with speech act verbs (verbs that perform the act that they describe), ex:
-   * I agree with everything you say.
+* We can use the present simple tense to talk about the past when we are telling a story. In this case, you have to keep in mind that the story took place in the past, but you are narrating it in the present, Ex:
+    
+	!!!Example
+    	* The other day I was watching TV when suddenly Terry calls me and tells me he needs money.
 
-1. Newspaper Headings
-We often see the present simple in news headlines to report past events, ex:
-   * Man rescues child from lake 
 
-1. Zero Conditionals
-We use the present simple in the zero conditionals. As it was mentioned earlier the present simple tense is used to talk about facts that are generally true. 'Zero conditional' is also used to talk about facts that are generally true. So, we can use the present simple tense in zero conditionals, ex: 
-    * If you 'heat' water to 100 degrees, it 'boils'. 
+#### Summarizing Movies, Books, etc
 
-1. Subordinating Conjunctions
-We use the present simple to talk about the sequence of actions in the present. The sequence of events indicates which action has been sooner or later. So if you are narrating something, use the simple present tense. Ex:
-    * When I get home, I 'take' a shower, then I 'watch' some television and after that I 'check' my emails.
-    * First I 'get up', then I have breakfast.
+* Whenever you want to talk about a film or a book after reading it or watching it. You have to use the present simple tense as you use it for narrating stories
 
-1. Subordinate Clauses
-We also use the present simple to talk about the future after words like "when", "until", "after", "before" and "as soon as". These are sometimes called subordinate clauses of time. So, keep in mind that the "simple present tense" is used in subordinate time clauses  to talk about the future. Ex:
-    * I'll talk to John when I 'see' him.
-    * I won't go out until it 'stops' raining. 
+	!!!Example
+    	* Frodo lives in the Shire. He has a best friend called Sam.
 
-1. Imperatives
-We can use the present simple tense to give instruction or ask for it. This structure mostly starts with the pronoun "you". Ex:
-    * You 'clean' you room now!
-    * Do I go to the left? or what ?
+#### Instructions and Directions
 
-1. First Conditional
-We use the present simple tense in the first conditional. 'First conditional' is used to talk about future events that are about to happen if something else happens. The if-clause mostly contains a simple present verb and is used in the simple present tense. Ex:
-    * If it 'rains', we will cancel our date.
-    * They will marry if his grandmother 'comes' back to the city. 
+* We use the present simple when we are giving instructions or directions. We often use ordering words, such as 'and', 'first' and 'then'.
 
-1. To Be + To-infinitive
-We use this structure to refer to a future event which is actually in the simple present tense. Sometimes this structure can even be used to give orders. Ex:
-    * You 'are to wash' the dishes tonight.
-    * He 'is to date' a blond girl on Valentine's day.
+	!!!Example
+   	* First, take a right. After that turn left. Then go straight. 
+
+
+#### I promise, I swear, I agree (Speech Act Verbs)
+
+* We use the present simple with **speech act verbs** (verbs that perform the act that they describe).
+
+	!!!Example
+   	* I agree with everything you say.
+
+
+#### Newspaper Headings
+
+* We often see the present simple in news headlines to report past events.
+
+	!!!Example
+   	* Man rescues child from lake 
+
+#### Zero Conditionals
+
+* We use the present simple in the zero conditionals. As it was mentioned earlier the present simple tense is used to talk about facts that are generally true. **Zero conditional** is also used to talk about *facts* that are **generally true**. So, we can use the present simple tense in zero conditionals.
+
+	!!!Example 
+    	* If you heat water to 100 degrees, it boils. 
+
+#### Subordinating Conjunctions
+
+* We use the present simple to talk about the sequence of actions in the present. The sequence of events indicates which action has been sooner or later. So if you are narrating something, use the simple present tense.
+
+	!!!Example
+    	* <u>When</u> I get home, I take a shower, <u>then</u> I watch some television and <u>after</u> that I 'check' my emails.
+    	* <u>First</u> I get up, <u>then</u> I have breakfast.
+
+
+#### Subordinate Time Clauses
+
+* We also use the present simple to talk about the future after words like **when**, **until**, **after**, **before** and **as soon as**. These are sometimes called subordinate clauses of time. So, keep in mind that the *simple present tense* is used in **subordinate time clauses**  to talk about the **future**.
+
+	!!!Example
+    	* I'll talk to John <u>when</u> I see him.
+    	* I won't go out <u>until</u> it stops raining. 
+
+#### Imperatives
+
+* We can use the present simple tense to **give instruction** or **ask for it**. This structure mostly starts with the pronoun `you`.
+
+	!!!Example
+    	* You 'clean' you room now!
+    	* Do I go to the left? or what ?
+
+
+#### First Conditional
+
+* We use the present simple tense in the first conditional. 'First conditional' is used to <u>talk about future events that are about to happen if something else happens</u>. The if-clause mostly contains a simple present verb and is used in the simple present tense. 
+
+	!!!Example
+    	* If it 'rains', we will cancel our date.
+    	* They will marry if his grandmother 'comes' back to the city. 
+
+#### To Be + To-infinitive
+
+* We use this structure to *refer* to a **future event** which is actually in the simple present tense. Sometimes this structure can even be *used* **to give orders**.
+
+	!!!Example
+    	* You <u>are to wash</u> the dishes tonight.
+    	* He <u>is to date</u> a blond girl on Valentine's day.
 
 
 ##  Common time Expressions

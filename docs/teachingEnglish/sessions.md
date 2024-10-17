@@ -1,3 +1,21 @@
+
+# Session 3: 
+
+## Reading `baseball pig `
+
+* do you know the difference between this words:
+  * hitter
+  * hater 
+  * hatter
+
+* What is an idiom? 
+* what is the difference between :
+  * grip: to hold something tightly or firmly
+  * grab: to take or seize something quickly or suddenly  
+  * grub: it refers to food or eating. As a verb it can also mean to dig or search for something. 
+
+1. How to make a paper airplane (Page 160)
+
 # Session 2: 0.11.2024
 
 ## First 01 Hour
