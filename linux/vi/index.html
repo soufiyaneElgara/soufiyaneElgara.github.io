@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://soufiyaneelgara.io/linux/vi/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Vi - Soufiyane El GARA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Vi";
+        var mkdocs_page_input_path = "linux/vi.md";
+        var mkdocs_page_url = "/linux/vi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Soufiyane El GARA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to my blog</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blog Posts</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Book summaries</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../book-summaries/book1-LearnHowToWinFriendsAnsInflunecePeople/">Learn How To Winn Friends And Influence Peope</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../book-summaries/book2-learnHowToLearn/">Learn How To learn</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Essential Tools</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/git/">git</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/github/">gitHub</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../linuxWisdom/">Linux Wisdom</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tmux/">Tmux</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Vi</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#waht-is-vi">Waht is Vi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-modes-existing-in-vi-04">What are the modes existing in Vi? (04)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-normal-mode-do">What "normal mode" do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-insert-mode-do">What "insert mode" do ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-visual-mode-do">What "visual mode" do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-ex-mode-do">What "ex mode" do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-scroll-the-window-down">Command to scroll the window down?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-scroll-the-window-up">Command to scroll the window up?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#one-single-command-to-move-the-cursor-to-the-top-of-the-window">One single command to move the cursor to the top of the window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#one-single-command-to-move-the-cursor-to-the-middle-of-the-window">One single command to move the cursor to the middle of the window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#one-single-command-to-move-the-cursor-the-bottom-of-the-window">One single command to move the cursor the bottom of the window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-gg-do">What does gg do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-g-do">What does G do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-components-of-the-secret-sauce">What are the components of the secret sauce?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-text-objects">What are the text objects?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-motions-in-vim">What are the motions in vim?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-essential-commands">What are the essential commands?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#describe-what-this-command-does-dw-daw-cw-caw">Describe what this command does, dw daw cw caw?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#describe-what-this-command-does-yi-di-va">Describe what this command does, yi) di) va'?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-dot-command-do">What DOT command do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-does-ddyy-dc-ia-oo-pp">What this commands does dd/yy D/C ^/$ I/A o/O p/P ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-does-u-ctrl-r-b-w">What this commands does u Ctrl+ r b w ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-select-a-line">Command to select a line?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-back-2-minutes-in-time">Command to back 2 minutes in time?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-delete-current-paragraph">Command to delete current paragraph?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-yank-current-paragraph">Command to yank current paragraph?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-append-to-current-word">Command to append to current word?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-delete-the-current-function">Command to delete the current function?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-yank-current-function">Command to yank current function?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-dif-yif">What this commands do dif yif?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-we-called">What we called !?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-uses-of-the-magic-wands">What uses of the magic wands (!)?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-three-types-of-magic-wands">What are the three types of magic wands?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-the-most-fastest-and-common-way-to-extend-vi">What is the most fastest and common way to extend vi?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-execute-the-line-wand">How to execute the line wand?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-commands-to-send-a-line-to-bash-calc-python3">What are the commands to send a line to bash Calc python3?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-select-a-section-wand">How to select a section wand?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-sort-a-section-and-send-it-to-bash">Command to sort a section and send it to bash?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-lined-number-wand">What is a lined number wand?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-do-a-lined-number-wand">How to do a lined number wand?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#give-the-steps-to-comment-a-section-with-on-space">Give the steps to comment a section with on space?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#explain-this-line-of-code-10s-g">Explain this line of code? :.,.+10s/^/# /g</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#give-the-steps-to-comment-a-section-with-spaces-on-it">Give the steps to comment a section with spaces on it?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-h-j-k-l">What this command do h j k l?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-h-m-l">What this command do H M L?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-w-e-b">What this command do w e b?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-0">What this commands do 0 $ } { ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-zz-zt-zb-c-e-c-y">What this commands do zz zt zb C-e C-y?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-i-i-a-a-o-o-ea">What this command do i, I, a, A, o, O, ea?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-c-h-ctrl-w-c-j-c-t-c-d-c-n-c-p">What this commands do C-h Ctrl-w C-j C-t C-d C-n C-p?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-r-r-j-gj">What this commands do r R J gJ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-cc-c-ciw-cw">What this commands do ~ cc C ciw, cw ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-s-s-u-c-r">What this commands do s S u C-r .?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-mark-text-visual-mode-02">Command to mark text (visual mode)? (02)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-in-the-visual-mode-y-d-u-u">What this commands in the visual mode &gt; &lt; y d ~ u U?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-start-a-macro">Command to start a macro?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-stop-recording-a-macro">Command to stop recording a macro?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-run-a-macro">Command to run a macro?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-same-as-wq">Command same as :wq?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-same-as-q">Command same as :q!?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-delete-from-the-current-position-into-a-certain-word">Command to delete from the current position into a certain word?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-yank-from-the-current-position-into-a-certain-word">Command to yank from the current position into a certain word?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-dd-dap-daf">What this commands do D/d$ dap daf?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-delete-only-what-inside-the-function">Command to delete only what inside the function ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-show-where-you-are">Command to show where you are?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-do-12">what this commands do :% :12?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-copy-the-whole-file">Command to copy the whole file?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-delete-from-current-position-into-the-last-line">Command to delete from current position into the last line?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-select-all-lines-of-a-paragraph-using">Command to select all lines of a paragraph? using!</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Teaching English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../teachingEnglish/guideLine/">Guideline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Grammar</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Tenses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/aspect/">Aspects</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/simplePresent/">Simple Present</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/presentContinuous/">Present Continuous</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/simplePast/">Simple Past</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/howToInfinitive/">How to + Infinitive</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Projects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects/projet1/">Project 1</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Soufiyane El GARA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Blog Posts</li>
+          <li class="breadcrumb-item">Linux</li>
+      <li class="breadcrumb-item active">Vi</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/soufiyaneElgara/soufiyaneElgara.github.io/edit/master/docs/linux/vi.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vi">Vi<a class="headerlink" href="#vi" title="Permanent link">#</a></h1>
+<hr />
+<h2 id="waht-is-vi">Waht is Vi<a class="headerlink" href="#waht-is-vi" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>Vi</strong> is a text editor that's been around for a long time and remains a powerful and widely used tool, especially in Unix-based systems.</p>
+</blockquote>
+<h2 id="what-are-the-modes-existing-in-vi-04">What are the modes existing in Vi? (04)<a class="headerlink" href="#what-are-the-modes-existing-in-vi-04" title="Permanent link">#</a></h2>
+<ul>
+<li>Normal Mode</li>
+<li>Insert Mode (i)</li>
+<li>Visual Mode (v)</li>
+<li>Ex Mode (:)</li>
+</ul>
+<h2 id="what-normal-mode-do">What "normal mode" do?<a class="headerlink" href="#what-normal-mode-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Navigate the structure of the file</p>
+</blockquote>
+<h2 id="what-insert-mode-do">What "insert mode" do ?<a class="headerlink" href="#what-insert-mode-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Editing the file</p>
+</blockquote>
+<h2 id="what-visual-mode-do">What "visual mode" do?<a class="headerlink" href="#what-visual-mode-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Highlight portions of the file to manipulate at one </p>
+</blockquote>
+<h2 id="what-ex-mode-do">What "ex mode" do?<a class="headerlink" href="#what-ex-mode-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Command mode</p>
+</blockquote>
+<h2 id="command-to-scroll-the-window-down">Command to scroll the window down?<a class="headerlink" href="#command-to-scroll-the-window-down" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>Ctrl + e</code> or use the arrows</p>
+</blockquote>
+<h2 id="command-to-scroll-the-window-up">Command to scroll the window up?<a class="headerlink" href="#command-to-scroll-the-window-up" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>Ctrl + y</code> or use the arrows</p>
+</blockquote>
+<h2 id="one-single-command-to-move-the-cursor-to-the-top-of-the-window">One single command to move the cursor to the top of the window?<a class="headerlink" href="#one-single-command-to-move-the-cursor-to-the-top-of-the-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>H</code></p>
+</blockquote>
+<h2 id="one-single-command-to-move-the-cursor-to-the-middle-of-the-window">One single command to move the cursor to the middle of the window?<a class="headerlink" href="#one-single-command-to-move-the-cursor-to-the-middle-of-the-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>M</code></p>
+</blockquote>
+<h2 id="one-single-command-to-move-the-cursor-the-bottom-of-the-window">One single command to move the cursor the bottom of the window?<a class="headerlink" href="#one-single-command-to-move-the-cursor-the-bottom-of-the-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p>`L``</p>
+</blockquote>
+<h2 id="what-does-gg-do">What does <code>gg</code> do?<a class="headerlink" href="#what-does-gg-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Go to the top of a file</p>
+</blockquote>
+<h2 id="what-does-g-do">What does <code>G</code> do?<a class="headerlink" href="#what-does-g-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Go to the end of the file  </p>
+</blockquote>
+<h2 id="what-are-the-components-of-the-secret-sauce">What are the components of the secret sauce?<a class="headerlink" href="#what-are-the-components-of-the-secret-sauce" title="Permanent link">#</a></h2>
+<ul>
+<li>Text objects and motions</li>
+<li>The DOT command</li>
+<li>macros</li>
+</ul>
+<h2 id="what-are-the-text-objects">What are the text objects?<a class="headerlink" href="#what-are-the-text-objects" title="Permanent link">#</a></h2>
+<ul>
+<li><code>w</code> word</li>
+<li><code>s</code> sentence</li>
+<li><code>p</code> paragraph</li>
+<li><code>t</code> tag</li>
+</ul>
+<h2 id="what-are-the-motions-in-vim">What are the motions in vim?<a class="headerlink" href="#what-are-the-motions-in-vim" title="Permanent link">#</a></h2>
+<ul>
+<li><code>a</code> all</li>
+<li><code>i</code> in </li>
+<li><code>f</code> search forward</li>
+<li><code>F</code> search backward</li>
+</ul>
+<h2 id="what-are-the-essential-commands">What are the essential commands?<a class="headerlink" href="#what-are-the-essential-commands" title="Permanent link">#</a></h2>
+<ul>
+<li><code>d</code> delete</li>
+<li><code>y</code> yank</li>
+<li><code>c</code> change</li>
+<li><code>v</code> visual selection</li>
+</ul>
+<h2 id="describe-what-this-command-does-dw-daw-cw-caw">Describe what this command does, <code>dw</code> <code>daw</code> <code>cw</code> <code>caw</code>?<a class="headerlink" href="#describe-what-this-command-does-dw-daw-cw-caw" title="Permanent link">#</a></h2>
+<ul>
+<li><code>dw</code> delete the word starting from the position of the cursor</li>
+<li><code>daw</code> delete all the word, doesn't mutter the position of cursor in the word</li>
+<li><code>cw</code> delete and put you in the insert mode starting from the position of the cursor.</li>
+<li><code>caw</code>: deleting the all word ind puts you in the insert mode</li>
+</ul>
+<h2 id="describe-what-this-command-does-yi-di-va">Describe what this command does, <code>yi)</code> <code>di)</code> <code>va'</code>?<a class="headerlink" href="#describe-what-this-command-does-yi-di-va" title="Permanent link">#</a></h2>
+<ul>
+<li><code>yi)</code> yank all text inside parentheses</li>
+<li><code>di)</code> delete inside parentheses</li>
+<li><code>va'</code> select all inside '</li>
+</ul>
+<h2 id="what-dot-command-do">What DOT command do?<a class="headerlink" href="#what-dot-command-do" title="Permanent link">#</a></h2>
+<blockquote>
+<p>The dot (.) command repeat the last command</p>
+</blockquote>
+<h2 id="what-this-commands-does-ddyy-dc-ia-oo-pp">What this commands does <code>dd/yy</code> <code>D/C</code> <code>^/$</code> <code>I/A</code> <code>o/O</code> <code>p/P</code> ?<a class="headerlink" href="#what-this-commands-does-ddyy-dc-ia-oo-pp" title="Permanent link">#</a></h2>
+<ul>
+<li><code>dd/yy</code> (delete/yank) the current line</li>
+<li><code>D/C</code>   (delete/change) all line the end of it</li>
+<li><code>^/$</code>   move to the (beginning/end) of the line</li>
+<li><code>I/A</code>   move to the (beginning/end) of the line and insert</li>
+<li><code>o/O</code>   insert new line (above/below) the current  </li>
+<li><code>p/P</code>   paste (below/above)</li>
+</ul>
+<h2 id="what-this-commands-does-u-ctrl-r-b-w">What this commands does <code>u</code> <code>Ctrl+ r</code> <code>b</code> <code>w</code> ?<a class="headerlink" href="#what-this-commands-does-u-ctrl-r-b-w" title="Permanent link">#</a></h2>
+<ul>
+<li><code>u</code>       undo</li>
+<li><code>Ctrl+ r</code> redo</li>
+<li><code>b</code>       backward by a word</li>
+<li><code>w</code>       forward by a word</li>
+</ul>
+<h2 id="command-to-select-a-line">Command to select a line?<a class="headerlink" href="#command-to-select-a-line" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>Shift v</code></p>
+</blockquote>
+<h2 id="command-to-back-2-minutes-in-time">Command to back 2 minutes in time?<a class="headerlink" href="#command-to-back-2-minutes-in-time" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>:earlier 2m</code></p>
+</blockquote>
+<h2 id="command-to-delete-current-paragraph">Command to delete current paragraph?<a class="headerlink" href="#command-to-delete-current-paragraph" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>dap</code></p>
+</blockquote>
+<h2 id="command-to-yank-current-paragraph">Command to yank current paragraph?<a class="headerlink" href="#command-to-yank-current-paragraph" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>yap</code></p>
+</blockquote>
+<h2 id="command-to-append-to-current-word">Command to append to current word?<a class="headerlink" href="#command-to-append-to-current-word" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>ea</code></p>
+</blockquote>
+<h2 id="command-to-delete-the-current-function">Command to delete the current function?<a class="headerlink" href="#command-to-delete-the-current-function" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>daf</code></p>
+</blockquote>
+<h2 id="command-to-yank-current-function">Command to yank current function?<a class="headerlink" href="#command-to-yank-current-function" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>yaf</code></p>
+</blockquote>
+<h2 id="what-this-commands-do-dif-yif">What this commands do <code>dif</code> <code>yif</code>?<a class="headerlink" href="#what-this-commands-do-dif-yif" title="Permanent link">#</a></h2>
+<ul>
+<li><code>dif</code>  delete current inner function</li>
+<li><code>dif</code>  yank current inner function</li>
+</ul>
+<h2 id="what-we-called">What we called <code>!</code>?<a class="headerlink" href="#what-we-called" title="Permanent link">#</a></h2>
+<blockquote>
+<p>They called magic wands or bang bang</p>
+</blockquote>
+<h2 id="what-uses-of-the-magic-wands">What uses of the magic wands (!)?<a class="headerlink" href="#what-uses-of-the-magic-wands" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Magic wands are mnemonic device for using the exclamation point (!) to send the current line, section or page to any command that can be run from the shell and replace those lines with the output if that command.</p>
+</blockquote>
+<h2 id="what-are-the-three-types-of-magic-wands">What are the three types of magic wands?<a class="headerlink" href="#what-are-the-three-types-of-magic-wands" title="Permanent link">#</a></h2>
+<ul>
+<li>Line wand</li>
+<li>Section wand</li>
+<li>Line number wand</li>
+</ul>
+<h2 id="what-is-the-most-fastest-and-common-way-to-extend-vi">What is the most fastest and common way to extend vi?<a class="headerlink" href="#what-is-the-most-fastest-and-common-way-to-extend-vi" title="Permanent link">#</a></h2>
+<blockquote>
+<p>It is the Line wand</p>
+</blockquote>
+<h2 id="how-to-execute-the-line-wand">How to execute the line wand?<a class="headerlink" href="#how-to-execute-the-line-wand" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Just spam bang twice(!!) to send the current line to the shell command or replace the current line with the output of utility command like date, cal or any text that comes out of any command</p>
+</blockquote>
+<h2 id="what-are-the-commands-to-send-a-line-to-bash-calc-python3">What are the commands to send a line to <code>bash</code> <code>Calc</code> <code>python3</code>?<a class="headerlink" href="#what-are-the-commands-to-send-a-line-to-bash-calc-python3" title="Permanent link">#</a></h2>
+<p>Just type on the key board :
+   * For bash    : !!bash<br />
+   * for Cal     : !!bc
+   * for python3!: !!python3</p>
+<h2 id="how-to-select-a-section-wand">How to select a section wand?<a class="headerlink" href="#how-to-select-a-section-wand" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Just type <code>!}</code></p>
+</blockquote>
+<h2 id="command-to-sort-a-section-and-send-it-to-bash">Command to sort a section and send it to bash?<a class="headerlink" href="#command-to-sort-a-section-and-send-it-to-bash" title="Permanent link">#</a></h2>
+<ul>
+<li><code>!}sort</code></li>
+<li><code>!}bash</code> </li>
+</ul>
+<h2 id="what-is-a-lined-number-wand">What is a lined number wand?<a class="headerlink" href="#what-is-a-lined-number-wand" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Lined number wand is just a larger version of the section wand but allows blank lines to be included.</p>
+</blockquote>
+<h2 id="how-to-do-a-lined-number-wand">How to do a lined number wand?<a class="headerlink" href="#how-to-do-a-lined-number-wand" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Start with bang (type only one bang) and follow it up with a colon and the line after the last line that you want to include fore example: 
+ type <code>!</code>, than type <code>:</code> only : colon will appear than add the line number after that one you want to include</p>
+</blockquote>
+<h2 id="give-the-steps-to-comment-a-section-with-on-space">Give the steps to comment a section with on space?<a class="headerlink" href="#give-the-steps-to-comment-a-section-with-on-space" title="Permanent link">#</a></h2>
+<ul>
+<li>Put the cursor where you want start commenting</li>
+<li>type <code>!}</code> you will select that section, and in the output remove the (!)</li>
+<li>then type <code>s/^/# /g</code></li>
+<li>the full command is <code>:.,.+10s/^/# /g</code> you can not add the (g)</li>
+</ul>
+<h2 id="explain-this-line-of-code-10s-g">Explain this line of code? <code>:.,.+10s/^/# /g</code><a class="headerlink" href="#explain-this-line-of-code-10s-g" title="Permanent link">#</a></h2>
+<ul>
+<li><code>.</code> dote stand for the current position</li>
+<li><code>+10</code> ten lines plus from the current position</li>
+<li><code>s</code> substation </li>
+<li><code>^</code> the beginning of the line</li>
+<li><code>g</code> means change everything similar in that line </li>
+</ul>
+<h2 id="give-the-steps-to-comment-a-section-with-spaces-on-it">Give the steps to comment a section with spaces on it?<a class="headerlink" href="#give-the-steps-to-comment-a-section-with-spaces-on-it" title="Permanent link">#</a></h2>
+<ul>
+<li>put the cursor on the line you want to start from</li>
+<li>type only one bang (!)</li>
+<li>type after colon (:) plus the line after the last line that you want to include.</li>
+<li>The pup of an we line showing the full path of the selected section, type after what you want <code>bash/pandoc</code> or <code>s/^.#</code> (to comment make sure to delete ! before)</li>
+</ul>
+<h2 id="what-this-command-do-h-j-k-l">What this command do <code>h</code> <code>j</code> <code>k</code> <code>l</code>?<a class="headerlink" href="#what-this-command-do-h-j-k-l" title="Permanent link">#</a></h2>
+<ul>
+<li><code>h</code> : move cursor left</li>
+<li><code>j</code> : move cursor down</li>
+<li><code>k</code> : move cursor up</li>
+<li><code>l</code> : move cursor right</li>
+</ul>
+<h2 id="what-this-command-do-h-m-l">What this command do <code>H</code> <code>M</code> <code>L</code>?<a class="headerlink" href="#what-this-command-do-h-m-l" title="Permanent link">#</a></h2>
+<ul>
+<li><code>H</code> : move to top of screen</li>
+<li><code>M</code> : move to middle of screen</li>
+<li><code>L</code> : move to bottom of screen</li>
+</ul>
+<h2 id="what-this-command-do-w-e-b">What this command do <code>w</code> <code>e</code> <code>b</code>?<a class="headerlink" href="#what-this-command-do-w-e-b" title="Permanent link">#</a></h2>
+<ul>
+<li><code>w</code> : jump forwards to start of a word</li>
+<li><code>e</code> : jump forwards to end of a word</li>
+<li><code>b</code> : jump backwards to start of a word</li>
+</ul>
+<h2 id="what-this-commands-do-0">What this commands do <code>0</code> <code>$</code> <code>}</code> <code>{</code> ?<a class="headerlink" href="#what-this-commands-do-0" title="Permanent link">#</a></h2>
+<ul>
+<li><code>0</code> : jump to the start of the line</li>
+<li><code>$</code> : jump to the end of the line</li>
+<li><code>}</code> : jump to next paragraph</li>
+<li><code>{</code> : jump to previous paragraph</li>
+</ul>
+<h2 id="what-this-commands-do-zz-zt-zb-c-e-c-y">What this commands do <code>zz</code> <code>zt</code> <code>zb</code> <code>C-e</code> <code>C-y</code>?<a class="headerlink" href="#what-this-commands-do-zz-zt-zb-c-e-c-y" title="Permanent link">#</a></h2>
+<ul>
+<li><code>zz</code>: centre cursor on screen</li>
+<li><code>zt</code>: position cursor on top of the screen</li>
+<li><code>zb</code>: position cursor on bottom of the screen</li>
+<li><code>Ctrl + e</code> : move screen down</li>
+<li><code>Ctrl + y</code> : move screen up one line</li>
+</ul>
+<h2 id="what-this-command-do-i-i-a-a-o-o-ea">What this command do <code>i</code>, <code>I</code>, <code>a</code>, <code>A</code>, <code>o</code>, <code>O</code>, <code>ea</code>?<a class="headerlink" href="#what-this-command-do-i-i-a-a-o-o-ea" title="Permanent link">#</a></h2>
+<ul>
+<li><code>i</code>: insert before the cursor</li>
+<li><code>I</code>: insert at the beginning of the line</li>
+<li><code>a</code>: insert (append) after the cursor</li>
+<li><code>A</code>: insert (append) at the end of the line</li>
+<li><code>o</code>: append (open) a new line below the current line</li>
+<li><code>O</code>: append (open) a new line above the current line</li>
+<li><code>ea</code>: insert (append) at the end of the word</li>
+</ul>
+<h2 id="what-this-commands-do-c-h-ctrl-w-c-j-c-t-c-d-c-n-c-p">What this commands do <code>C-h</code> <code>Ctrl-w</code> <code>C-j</code> <code>C-t</code> <code>C-d</code> <code>C-n</code> <code>C-p</code>?<a class="headerlink" href="#what-this-commands-do-c-h-ctrl-w-c-j-c-t-c-d-c-n-c-p" title="Permanent link">#</a></h2>
+<ul>
+<li><code>Ctrl + h</code> : delete the character before the cursor during insert mode</li>
+<li><code>Ctrl + w</code> : delete word before the cursor during insert mode</li>
+<li><code>Ctrl + j</code> : begin new line during insert mode</li>
+<li><code>Ctrl + t</code> : indent (move to right) line one shift width during insert mode</li>
+<li><code>Ctrl + d</code> : de-indent (move to left) line one shift width during insert mode</li>
+<li><code>Ctrl + n</code> : insert (auto-complete) next match before the cursor during insert mode</li>
+<li><code>Ctrl + p</code> : insert (auto-complete) previous match before the cursor during insert mode</li>
+</ul>
+<h2 id="what-this-commands-do-r-r-j-gj">What this commands do <code>r</code> <code>R</code> <code>J</code> <code>gJ</code>?<a class="headerlink" href="#what-this-commands-do-r-r-j-gj" title="Permanent link">#</a></h2>
+<ul>
+<li><code>r</code> : replace a single character</li>
+<li><code>R</code> : replace more than one character, until <code>Esc</code> is pressed</li>
+<li><code>J</code> : join line below to the current one with one space in between</li>
+<li><code>gJ</code>: join line below to the current one without space in between</li>
+</ul>
+<h2 id="what-this-commands-do-cc-c-ciw-cw">What this commands do <code>~</code> <code>cc</code> <code>C</code> <code>ciw</code>, <code>cw</code> ?<a class="headerlink" href="#what-this-commands-do-cc-c-ciw-cw" title="Permanent link">#</a></h2>
+<ul>
+<li><code>~</code> : change to lower or upper case</li>
+<li><code>cc</code> : change (replace) entire line</li>
+<li><code>C</code> : change (replace) to the end of the line</li>
+<li><code>ciw</code> : change (replace) entire word</li>
+<li><code>cw</code>: change (replace) t the end of word</li>
+</ul>
+<h2 id="what-this-commands-do-s-s-u-c-r">What this commands do <code>s</code> <code>S</code> <code>u</code> <code>C-r</code> <code>.</code>?<a class="headerlink" href="#what-this-commands-do-s-s-u-c-r" title="Permanent link">#</a></h2>
+<ul>
+<li><code>s</code> : delete character and substitute text</li>
+<li><code>S</code> :delete line and substitute text (same as cc)</li>
+<li><code>u</code> : undo</li>
+<li><code>Ctrl + r</code> : redo</li>
+<li><code>.</code> : repeat last command</li>
+</ul>
+<h2 id="command-to-mark-text-visual-mode-02">Command to mark text (visual mode)? (02)<a class="headerlink" href="#command-to-mark-text-visual-mode-02" title="Permanent link">#</a></h2>
+<ul>
+<li><code>v</code> : start visual mode, mark lines , then do a command (like y-yank)</li>
+<li><code>V</code> : start Line-wise visual mode</li>
+</ul>
+<h2 id="what-this-commands-in-the-visual-mode-y-d-u-u">What this commands in the visual mode <code>&gt;</code> <code>&lt;</code> <code>y</code> <code>d</code> <code>~</code> <code>u</code> <code>U</code>?<a class="headerlink" href="#what-this-commands-in-the-visual-mode-y-d-u-u" title="Permanent link">#</a></h2>
+<ul>
+<li><code>&gt;</code> : shift text right</li>
+<li><code>&lt;</code> : shift text left</li>
+<li><code>y</code> : yank (copy) marked text</li>
+<li><code>d</code> : delete marked text</li>
+<li><code>~</code> : switch case</li>
+<li><code>u</code> : change marked text to lower case</li>
+<li><code>U</code> : change marked text to uppercase</li>
+</ul>
+<h2 id="command-to-start-a-macro">Command to start a macro?<a class="headerlink" href="#command-to-start-a-macro" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>qa</code> : record macro a (a is the name)</p>
+</blockquote>
+<h2 id="command-to-stop-recording-a-macro">Command to stop recording a macro?<a class="headerlink" href="#command-to-stop-recording-a-macro" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>q</code>  : stop recording macro</p>
+</blockquote>
+<h2 id="command-to-run-a-macro">Command to run a macro?<a class="headerlink" href="#command-to-run-a-macro" title="Permanent link">#</a></h2>
+<ul>
+<li><code>@</code>  : run macro a</li>
+<li><code>@@</code> : rerun last run macro</li>
+</ul>
+<h2 id="command-same-as-wq">Command same as <code>:wq</code>?<a class="headerlink" href="#command-same-as-wq" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>ZZ</code></p>
+</blockquote>
+<h2 id="command-same-as-q">Command same as <code>:q!</code>?<a class="headerlink" href="#command-same-as-q" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>ZQ</code> </p>
+</blockquote>
+<h2 id="command-to-delete-from-the-current-position-into-a-certain-word">Command to delete from the current position into a certain word?<a class="headerlink" href="#command-to-delete-from-the-current-position-into-a-certain-word" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>d/searchedWord</code></p>
+</blockquote>
+<h2 id="command-to-yank-from-the-current-position-into-a-certain-word">Command to yank from the current position into a certain word?<a class="headerlink" href="#command-to-yank-from-the-current-position-into-a-certain-word" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>y/searchedWord</code></p>
+</blockquote>
+<h2 id="what-this-commands-do-dd-dap-daf">What this commands do <code>D/d$</code> <code>dap</code> <code>daf</code>?<a class="headerlink" href="#what-this-commands-do-dd-dap-daf" title="Permanent link">#</a></h2>
+<ul>
+<li><code>D</code> <code>d$</code> delete into the end of file</li>
+<li><code>dap</code> delete all paragraph</li>
+<li><code>daf</code>  delete all function</li>
+</ul>
+<h2 id="command-to-delete-only-what-inside-the-function">Command to delete only what inside the function ?<a class="headerlink" href="#command-to-delete-only-what-inside-the-function" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>def</code></p>
+</blockquote>
+<h2 id="command-to-show-where-you-are">Command to show where you are?<a class="headerlink" href="#command-to-show-where-you-are" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>Ctrl+ g</code></p>
+</blockquote>
+<h2 id="what-this-commands-do-12">what this commands do <code>:%</code> <code>:12</code>?<a class="headerlink" href="#what-this-commands-do-12" title="Permanent link">#</a></h2>
+<ul>
+<li><code>:%</code> moves you to the last line</li>
+<li><code>:12</code> moves you to line 12</li>
+</ul>
+<h2 id="command-to-copy-the-whole-file">Command to copy the whole file?<a class="headerlink" href="#command-to-copy-the-whole-file" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>y :%</code> y is a command flowed by :%</p>
+</blockquote>
+<h2 id="command-to-delete-from-current-position-into-the-last-line">Command to delete from current position into the last line?<a class="headerlink" href="#command-to-delete-from-current-position-into-the-last-line" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>:.,%d</code></p>
+</blockquote>
+<h2 id="command-to-select-all-lines-of-a-paragraph-using">Command to select all lines of a paragraph? using!<a class="headerlink" href="#command-to-select-all-lines-of-a-paragraph-using" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>!}</code></p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tmux/" class="btn btn-neutral float-left" title="Tmux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../teachingEnglish/guideLine/" class="btn btn-neutral float-right" title="Guideline">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2023 - 2024 Soufiyane EL GARA</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/soufiyaneElgara/soufiyaneElgara.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../tmux/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../teachingEnglish/guideLine/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

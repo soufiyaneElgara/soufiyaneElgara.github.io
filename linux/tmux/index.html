@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://soufiyaneelgara.io/linux/tmux/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Tmux - Soufiyane El GARA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tmux";
+        var mkdocs_page_input_path = "linux/tmux.md";
+        var mkdocs_page_url = "/linux/tmux/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Soufiyane El GARA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to my blog</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blog Posts</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Book summaries</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../book-summaries/book1-LearnHowToWinFriendsAnsInflunecePeople/">Learn How To Winn Friends And Influence Peope</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../book-summaries/book2-learnHowToLearn/">Learn How To learn</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Essential Tools</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/git/">git</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/github/">gitHub</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../linuxWisdom/">Linux Wisdom</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Tmux</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-tmux">What is Tmux?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-tmux-stand-for">What Tmux stand for?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-tmux-manages-different-programs">How tmux manages different programs?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#can-a-program-be-detached-from-the-terminal">Can a program be detached from the terminal?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-means-tmux-sessions-are-persistent">What means tmux sessions are persistent?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-main-uses-of-tmux">What are the main uses of tmux?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-the-tmux-server-start-running">When the tmux server start running?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-tmux-keep-its-sates">Where tmux keep its sates?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-the-client-talks-to-the-tmux-server">How the client talks to the tmux server?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-programs-run">Where programs run?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-the-window-has">What the window has?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-many-sessions-windows-are-linked-to">How many sessions windows are linked to?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-the-session-keep-track-of-its-windows">How the session keep track of its windows?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-many-clients-a-session-can-attache">How many clients a session can attache?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-commands-to-use-to-create-a-session">What are the commands to use to create a session?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-give-a-session-a-name">How to give a session a name?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-the-keys-are-forwarded-once-a-tmux-client-is-attached">How the keys are forwarded once a tmux client is attached?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-the-default-prefix-of-tmux">What is the default prefix of tmux?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-happens-when-a-tmux-prefix-is-pressed">What happens when a tmux prefix is pressed?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-show-a-list-of-all-the-short-keys-binding">Command to show a list of all the short keys binding?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-see-a-description-of-single-key">How to see a description of single key?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-inter-the-interactive-command-prompt">Command to inter the interactive command prompt?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-means-detaching-from-the-tmux">What means detaching from the tmux?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-detach">Command to detach?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-reattach-to-the-previous-session">Command to reattach to the previous session?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-reattach-to-session-by-name">Command to reattach to session by name?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-list-all-the-session-that-can-be-attached-to">Command to list all the session that can be attached to?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-kill-tmux-server-entirely">How to kill tmux server entirely?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-create-new-window">Command to create new window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-the-pine-is-created">How the pine is created?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-split-the-current-pane-horizontally">Command to split the current pane horizontally?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-split-the-current-pane-vertically">Command to split the current pane vertically?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-rotate-a-pane-from-horizontally-to-vertically">Command to rotate a pane from horizontally to vertically?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-spilt-horizontally-or-vertically-a-pane-split-window">Command to spilt horizontally or vertically a pane? (split-window)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-split-the-pane-without-living-the-active-pane-split-window">Command to split the pane without living the active pane? (split-window)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-this-command-do-split-window-f">What does this command do split-window f?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-this-command-do-split-window-b">What does this command do split-window -b?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-copy-using-the-mouse">How to copy using the mouse?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-change-to-last-window">Command to change to last window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-change-to-the-next-window">Command to change to the next window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-change-to-the-previous-window">command to change to the previous window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-c-b-w">What this command do C-b w?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-c-b-number">What this command do C-b number?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#commands-to-change-between-the-panes">Commands to change between the panes?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-this-command-do-c-b-q">What does this command do C-b q?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-display-list-of-clients">Command to display list of clients?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-kill-a-window-with-confirmation">Command to kill a window with confirmation?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-kill-only-active-pane">Command to kill only active pane?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-rename-a-session">Command to rename a session?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-rename-a-window">Command to rename a window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-are-used-for-c-b-and-c-b">What this command are used for C-b { and C-b}?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#commands-to-resize-panes">Commands to resize panes?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-make-a-pane-temporarily-take-the-whole-window">Command to make a pane temporarily take the whole window?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#steps-to-copy-using-keys">Steps to copy using keys?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-does-in-the-copy-mode-q-ca-and-c-e">What this commands does in the copy mode q, Ca and C-e?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-commands-does-in-the-copy-mode-c-r-m-f-and-m-b">What this commands does in the copy mode C-r, M-f and M-b?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-do-c-b">What this command do C-b =?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-keys-supported-in-the-buffer-mode">What are the keys supported in the buffer mode?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-create-a-buffer">Command to create a buffer?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-rename-a-buffer">Command to rename a buffer?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-does-loadb-bbuffername-afile">What this command does loadb -bbuffername ~/a/file?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-this-command-does-saveb-bbuffer0-saved-buffer">What this command does saveb -bbuffer0 ~/saved-buffer?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-this-command-c-b-f">What does this command C-b f?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-to-activate-the-mouse">Command to activate the mouse ?</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../vi/">Vi</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Teaching English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../teachingEnglish/guideLine/">Guideline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Grammar</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Tenses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/aspect/">Aspects</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/simplePresent/">Simple Present</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/presentContinuous/">Present Continuous</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/simplePast/">Simple Past</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../teachingEnglish/grammar/tenses/howToInfinitive/">How to + Infinitive</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Projects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects/projet1/">Project 1</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Soufiyane El GARA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Blog Posts</li>
+          <li class="breadcrumb-item">Linux</li>
+      <li class="breadcrumb-item active">Tmux</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/soufiyaneElgara/soufiyaneElgara.github.io/edit/master/docs/linux/tmux.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tmux">Tmux<a class="headerlink" href="#tmux" title="Permanent link">#</a></h1>
+<hr />
+<h2 id="what-is-tmux">What is Tmux?<a class="headerlink" href="#what-is-tmux" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Tmux is program which runs in a terminal and allows multiple other terminal programs to be run inside it.</p>
+</blockquote>
+<h2 id="what-tmux-stand-for">What Tmux stand for?<a class="headerlink" href="#what-tmux-stand-for" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Tmux stand for terminal multiplexer</p>
+</blockquote>
+<h2 id="how-tmux-manages-different-programs">How tmux manages different programs?<a class="headerlink" href="#how-tmux-manages-different-programs" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Each program inside tmux gets its own terminal manged by tmux, which can be accessed from the single terminal where tmux is running.</p>
+</blockquote>
+<h2 id="can-a-program-be-detached-from-the-terminal">Can a program be detached from the terminal?<a class="headerlink" href="#can-a-program-be-detached-from-the-terminal" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Tmux and any programs running inside it can be detached from the terminal where it is running (the outside terminal) and later reattached to the same or another terminal.</p>
+</blockquote>
+<h2 id="what-means-tmux-sessions-are-persistent">What means tmux sessions are persistent?<a class="headerlink" href="#what-means-tmux-sessions-are-persistent" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Means that programs running in tmux will continue to run even if you get disconnected.</p>
+</blockquote>
+<h2 id="what-are-the-main-uses-of-tmux">What are the main uses of tmux?<a class="headerlink" href="#what-are-the-main-uses-of-tmux" title="Permanent link">#</a></h2>
+<ul>
+<li>Work with multiple programs and shells together in one terminal, a bit like a window manager.</li>
+<li>Protect running programs on a remote server from connection drops by running them inside tmux.</li>
+<li>Allow programs running on remote server to be access from multiple different local computers.</li>
+</ul>
+<h2 id="when-the-tmux-server-start-running">When the tmux server start running?<a class="headerlink" href="#when-the-tmux-server-start-running" title="Permanent link">#</a></h2>
+<blockquote>
+<p>The tmux server run automatically, when the server runs a tmux command and by default exists when there are no running programs.</p>
+</blockquote>
+<h2 id="where-tmux-keep-its-sates">Where tmux keep its sates?<a class="headerlink" href="#where-tmux-keep-its-sates" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Tmux keeps all its state in a single main process , called the tmux server. This runs in the background and manges all the programs running inside tmux and keeps track of their output.  </p>
+</blockquote>
+<h2 id="how-the-client-talks-to-the-tmux-server">How the client talks to the tmux server?<a class="headerlink" href="#how-the-client-talks-to-the-tmux-server" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Tmux takes over the terminal where it is run and talks to the server using a socket file in <code>/tmp</code> </p>
+</blockquote>
+<h2 id="where-programs-run">Where programs run?<a class="headerlink" href="#where-programs-run" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Programs run in terminal panes, which each belong to one window</p>
+</blockquote>
+<h2 id="what-the-window-has">What the window has?<a class="headerlink" href="#what-the-window-has" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Each window has a name and one active pane by default.</p>
+</blockquote>
+<h2 id="how-many-sessions-windows-are-linked-to">How many sessions windows are linked to?<a class="headerlink" href="#how-many-sessions-windows-are-linked-to" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Windows are linked to one or more sessions.</p>
+</blockquote>
+<h2 id="how-the-session-keep-track-of-its-windows">How the session keep track of its windows?<a class="headerlink" href="#how-the-session-keep-track-of-its-windows" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Each session has a list of windows, each with an index</p>
+</blockquote>
+<h2 id="how-many-clients-a-session-can-attache">How many clients a session can attache?<a class="headerlink" href="#how-many-clients-a-session-can-attache" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Sessions are attached to one or more clients, or are detached.</p>
+</blockquote>
+<h2 id="what-are-the-commands-to-use-to-create-a-session">What are the commands to use to create a session?<a class="headerlink" href="#what-are-the-commands-to-use-to-create-a-session" title="Permanent link">#</a></h2>
+<ul>
+<li>tmux</li>
+<li>tmux new</li>
+<li>tmux new-session  </li>
+</ul>
+<div class="admonition tipe">
+<p class="admonition-title">Tipe</p>
+<p>All the three commands are used to create a session</p>
+</div>
+<h2 id="how-to-give-a-session-a-name">How to give a session a name?<a class="headerlink" href="#how-to-give-a-session-a-name" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>tmux new -smysession</code> :  With <code>-s</code> flag you give the session a name</p>
+</blockquote>
+<h2 id="how-the-keys-are-forwarded-once-a-tmux-client-is-attached">How the keys are forwarded once a tmux client is attached?<a class="headerlink" href="#how-the-keys-are-forwarded-once-a-tmux-client-is-attached" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Once a tmux client is attached, any keys entered are forwarded to the program running in the active pane of the current window.</p>
+</blockquote>
+<h2 id="what-is-the-default-prefix-of-tmux">What is the default prefix of tmux?<a class="headerlink" href="#what-is-the-default-prefix-of-tmux" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b</code></p>
+</blockquote>
+<h2 id="what-happens-when-a-tmux-prefix-is-pressed">What happens when a tmux prefix is pressed?<a class="headerlink" href="#what-happens-when-a-tmux-prefix-is-pressed" title="Permanent link">#</a></h2>
+<blockquote>
+<p>When the prefix key is pressed, tmux waits for another key press and that determines what tmux command is executed. </p>
+</blockquote>
+<h2 id="command-to-show-a-list-of-all-the-short-keys-binding">Command to show a list of all the short keys binding?<a class="headerlink" href="#command-to-show-a-list-of-all-the-short-keys-binding" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b ?</code></p>
+</blockquote>
+<h2 id="how-to-see-a-description-of-single-key">How to see a description of single key?<a class="headerlink" href="#how-to-see-a-description-of-single-key" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b /</code> </p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>a prompt at the bottom of terminal appears</p>
+</div>
+<h2 id="command-to-inter-the-interactive-command-prompt">Command to inter the interactive command prompt?<a class="headerlink" href="#command-to-inter-the-interactive-command-prompt" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b :</code></p>
+</blockquote>
+<h2 id="what-means-detaching-from-the-tmux">What means detaching from the tmux?<a class="headerlink" href="#what-means-detaching-from-the-tmux" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Detaching from a tmux session means disconnecting from the session while leaving it running in the background</p>
+</blockquote>
+<h2 id="command-to-detach">Command to detach?<a class="headerlink" href="#command-to-detach" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b d</code></p>
+</blockquote>
+<h2 id="command-to-reattach-to-the-previous-session">Command to reattach to the previous session?<a class="headerlink" href="#command-to-reattach-to-the-previous-session" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>tmux attach</code></p>
+</blockquote>
+<h2 id="command-to-reattach-to-session-by-name">Command to reattach to session by name?<a class="headerlink" href="#command-to-reattach-to-session-by-name" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>tmux attach -tmysession</code> using the -t flag</p>
+</blockquote>
+<h2 id="command-to-list-all-the-session-that-can-be-attached-to">Command to list all the session that can be attached to?<a class="headerlink" href="#command-to-list-all-the-session-that-can-be-attached-to" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>tmux ls</code> (ls is an alias tmux-session)</p>
+</blockquote>
+<h2 id="how-to-kill-tmux-server-entirely">How to kill tmux server entirely?<a class="headerlink" href="#how-to-kill-tmux-server-entirely" title="Permanent link">#</a></h2>
+<ul>
+<li><code>:kill-server</code> in prompt of tmux</li>
+<li>or if there are no session, windows or panes inside tmux  </li>
+</ul>
+<h2 id="command-to-create-new-window">Command to create new window?<a class="headerlink" href="#command-to-create-new-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b c</code> is using the key binding <code>new-window</code></p>
+</blockquote>
+<h2 id="how-the-pine-is-created">How the pine is created?<a class="headerlink" href="#how-the-pine-is-created" title="Permanent link">#</a></h2>
+<blockquote>
+<p>A pine is created by splitting a window, this done withe <code>split-window</code> command.</p>
+</blockquote>
+<h2 id="command-to-split-the-current-pane-horizontally">Command to split the current pane horizontally?<a class="headerlink" href="#command-to-split-the-current-pane-horizontally" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b %</code></p>
+</blockquote>
+<h2 id="command-to-split-the-current-pane-vertically">Command to split the current pane vertically?<a class="headerlink" href="#command-to-split-the-current-pane-vertically" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b "</code></p>
+</blockquote>
+<h2 id="command-to-rotate-a-pane-from-horizontally-to-vertically">Command to rotate a pane from horizontally to vertically?<a class="headerlink" href="#command-to-rotate-a-pane-from-horizontally-to-vertically" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b space</code></p>
+</blockquote>
+<h2 id="command-to-spilt-horizontally-or-vertically-a-pane-split-window">Command to spilt horizontally or vertically a pane? (split-window)<a class="headerlink" href="#command-to-spilt-horizontally-or-vertically-a-pane-split-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>split-window -v</code> or <code>split-window -h</code></p>
+</blockquote>
+<h2 id="command-to-split-the-pane-without-living-the-active-pane-split-window">Command to split the pane without living the active pane? (split-window)<a class="headerlink" href="#command-to-split-the-pane-without-living-the-active-pane-split-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>split-window -d</code></p>
+</blockquote>
+<h2 id="what-does-this-command-do-split-window-f">What does this command do <code>split-window f</code>?<a class="headerlink" href="#what-does-this-command-do-split-window-f" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Makes a new pane spanning the whole width or height of the window instead of being constrained to the size of the pane being split </p>
+</blockquote>
+<h2 id="what-does-this-command-do-split-window-b">What does this command do <code>split-window -b</code>?<a class="headerlink" href="#what-does-this-command-do-split-window-b" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Puts the new pane to left or above of the pane being split instead of the right or below.</p>
+</blockquote>
+<h2 id="how-to-copy-using-the-mouse">How to copy using the mouse?<a class="headerlink" href="#how-to-copy-using-the-mouse" title="Permanent link">#</a></h2>
+<ul>
+<li>Shift + selection with the mouse</li>
+<li>Shift + pressing the middle button of the mouse  </li>
+</ul>
+<h2 id="command-to-change-to-last-window">Command to change to last window?<a class="headerlink" href="#command-to-change-to-last-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b l</code></p>
+</blockquote>
+<h2 id="command-to-change-to-the-next-window">Command to change to the next window?<a class="headerlink" href="#command-to-change-to-the-next-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b n</code></p>
+</blockquote>
+<h2 id="command-to-change-to-the-previous-window">command to change to the previous window?<a class="headerlink" href="#command-to-change-to-the-previous-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b p</code></p>
+</blockquote>
+<h2 id="what-this-command-do-c-b-w">What this command do <code>C-b w</code>?<a class="headerlink" href="#what-this-command-do-c-b-w" title="Permanent link">#</a></h2>
+<blockquote>
+<p>It is used to display a menu of all windows within the current session.</p>
+</blockquote>
+<h2 id="what-this-command-do-c-b-number">What this command do <code>C-b number</code>?<a class="headerlink" href="#what-this-command-do-c-b-number" title="Permanent link">#</a></h2>
+<blockquote>
+<p>It prompts for a window index and change to that window</p>
+</blockquote>
+<h2 id="commands-to-change-between-the-panes">Commands to change between the panes?<a class="headerlink" href="#commands-to-change-between-the-panes" title="Permanent link">#</a></h2>
+<ul>
+<li><code>C-b Up</code></li>
+<li><code>C-b Down</code></li>
+<li><code>C-b Left</code></li>
+<li><code>C-b Right</code></li>
+</ul>
+<h2 id="what-does-this-command-do-c-b-q">What does this command do <code>C-b q</code>?<a class="headerlink" href="#what-does-this-command-do-c-b-q" title="Permanent link">#</a></h2>
+<blockquote>
+<p>prints the pane numbers and their size on the top the panes for a short time, pressing one of the number keys before they disappear changes the active pane to the chosen pane</p>
+</blockquote>
+<h2 id="command-to-display-list-of-clients">Command to display list of clients?<a class="headerlink" href="#command-to-display-list-of-clients" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b D</code></p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Each client is shown in the list in the top half with its name..., entering (d, D, x or X) will detach that client</p>
+</div>
+<h2 id="command-to-kill-a-window-with-confirmation">Command to kill a window with confirmation?<a class="headerlink" href="#command-to-kill-a-window-with-confirmation" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b &amp;</code> bounded to kill-pane and kill-session</p>
+</blockquote>
+<h2 id="command-to-kill-only-active-pane">Command to kill only active pane?<a class="headerlink" href="#command-to-kill-only-active-pane" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b x</code> bounded to kill-pane and kill-session</p>
+</blockquote>
+<h2 id="command-to-rename-a-session">Command to rename a session?<a class="headerlink" href="#command-to-rename-a-session" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b $</code></p>
+</blockquote>
+<h2 id="command-to-rename-a-window">Command to rename a window?<a class="headerlink" href="#command-to-rename-a-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b ,</code> bounded to rename-window</p>
+</blockquote>
+<h2 id="what-this-command-are-used-for-c-b-and-c-b">What this command are used for <code>C-b {</code> and <code>C-b}</code>?<a class="headerlink" href="#what-this-command-are-used-for-c-b-and-c-b" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Used to swipe pane, they are using <code>swap-window</code>, <code>wsip-pane</code></p>
+</blockquote>
+<h2 id="commands-to-resize-panes">Commands to resize panes?<a class="headerlink" href="#commands-to-resize-panes" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b C-Left</code>, <code>C-b C-Right</code>, <code>C-b C-Up</code> and <code>C-b C-Down</code></p>
+</blockquote>
+<h2 id="command-to-make-a-pane-temporarily-take-the-whole-window">Command to make a pane temporarily take the whole window?<a class="headerlink" href="#command-to-make-a-pane-temporarily-take-the-whole-window" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>C-b z</code> ones takes the full window, to back tape the same command </p>
+</blockquote>
+<h2 id="steps-to-copy-using-keys">Steps to copy using keys?<a class="headerlink" href="#steps-to-copy-using-keys" title="Permanent link">#</a></h2>
+<ul>
+<li><code>C-b [</code> enter the copy mode</li>
+<li><code>C- Space</code> should very fast, used to select</li>
+<li><code>C-w</code> to copy</li>
+<li><code>C-b ]</code> to paste in the insert mode or the command mode</li>
+</ul>
+<h2 id="what-this-commands-does-in-the-copy-mode-q-ca-and-c-e">What this commands does in the copy mode <code>q</code>, <code>Ca</code> and <code>C-e</code>?<a class="headerlink" href="#what-this-commands-does-in-the-copy-mode-q-ca-and-c-e" title="Permanent link">#</a></h2>
+<ul>
+<li><code>q</code> exit the copy mode</li>
+<li><code>C-a</code> move the cursor the start of the line</li>
+<li><code>C-e</code> move the cursor the end of the line</li>
+</ul>
+<h2 id="what-this-commands-does-in-the-copy-mode-c-r-m-f-and-m-b">What this commands does in the copy mode <code>C-r</code>, <code>M-f</code> and <code>M-b</code>?<a class="headerlink" href="#what-this-commands-does-in-the-copy-mode-c-r-m-f-and-m-b" title="Permanent link">#</a></h2>
+<ul>
+<li><code>C-r</code>  search interactively backwards</li>
+<li><code>M-f</code>, <code>M-b</code> move the cursor to the next or the previous word</li>
+</ul>
+<h2 id="what-this-command-do-c-b">What this command do <code>C-b =</code>?<a class="headerlink" href="#what-this-command-do-c-b" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Offer a list of buffers with a preview of their content</p>
+</blockquote>
+<h2 id="what-are-the-keys-supported-in-the-buffer-mode">What are the keys supported in the buffer mode?<a class="headerlink" href="#what-are-the-keys-supported-in-the-buffer-mode" title="Permanent link">#</a></h2>
+<ul>
+<li><code>Enter</code> or <code>P</code> Paste the selected buffer</li>
+<li><code>d/D</code> delete the selected buffer</li>
+</ul>
+<h2 id="command-to-create-a-buffer">Command to create a buffer?<a class="headerlink" href="#command-to-create-a-buffer" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>:setb -bfoo bar</code> create a buffer named foo, with the content of bar</p>
+</blockquote>
+<h2 id="command-to-rename-a-buffer">Command to rename a buffer?<a class="headerlink" href="#command-to-rename-a-buffer" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>:setb bbuffer0 -nmybuffer</code> the flag -b gives the existing buffer a name and -n the new name</p>
+</blockquote>
+<h2 id="what-this-command-does-loadb-bbuffername-afile">What this command does <code>loadb -bbuffername ~/a/file</code>?<a class="headerlink" href="#what-this-command-does-loadb-bbuffername-afile" title="Permanent link">#</a></h2>
+<blockquote>
+<p>load-buffer will load a buffer from a file </p>
+</blockquote>
+<h2 id="what-this-command-does-saveb-bbuffer0-saved-buffer">What this command does <code>saveb -bbuffer0 ~/saved-buffer</code>?<a class="headerlink" href="#what-this-command-does-saveb-bbuffer0-saved-buffer" title="Permanent link">#</a></h2>
+<blockquote>
+<p>An existing buffer can be saved to a file with <code>save-buffer</code></p>
+</blockquote>
+<h2 id="what-does-this-command-c-b-f">What does this command <code>C-b f</code>?<a class="headerlink" href="#what-does-this-command-c-b-f" title="Permanent link">#</a></h2>
+<blockquote>
+<p>prompts for some text and then enters tree mode with a filter to show only panes where that text appears in the visible content or title of the pane or the window name </p>
+</blockquote>
+<h2 id="command-to-activate-the-mouse">Command to activate the mouse ?<a class="headerlink" href="#command-to-activate-the-mouse" title="Permanent link">#</a></h2>
+<blockquote>
+<p><code>set -g mouse on</code> should typed in <code>.tmux.conf</code> file</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../linuxWisdom/" class="btn btn-neutral float-left" title="Linux Wisdom"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../vi/" class="btn btn-neutral float-right" title="Vi">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2023 - 2024 Soufiyane EL GARA</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/soufiyaneElgara/soufiyaneElgara.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../linuxWisdom/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../vi/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
