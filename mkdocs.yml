@@ -36,7 +36,7 @@ extra:
       #link: https
 
 nav:
-  - About Me: 'index.md'
+  - Welcome to my blog: 'index.md'
   - Blog Posts:
     - 'Book summaries':
        - 'Learn How To Winn Friends And Influence Peope': 'book-summaries/book1-LearnHowToWinFriendsAnsInflunecePeople.md' 

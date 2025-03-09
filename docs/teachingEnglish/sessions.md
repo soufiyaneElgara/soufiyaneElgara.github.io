@@ -1,5 +1,112 @@
+# Session 4: 
+
+1. How are You ?
+1. Did you sleep well ?
+1. How is the weather in you town?
+
+Before I tell what is in the program for today, I want to ask you :
+1. Do you listen to the audios that I provide you ? How do you find them?
+1. Did you do a summery of any book ? 
+1. You didn't make the changes in your LinkedIn.
+
+1. What we are gonna do to day? 
+   1. Correction of tow pages of the grammar  ?
+   2. ALC book
+   3. Open discussion
+
+
+
+## ALC book
+1. How to make a paper airplane (Page 160)
+   * *must* is used for stronger obligations and necessities.
+   * *Should* is used for weaker obligations, advice, and expectations.
+
+## Discussion on the video 
+
+1. Boys and girl should be raised the same way?
+2. Every women should be a feminist?
+3. I believe abortion should be legal?
+4. I don't mind strangers flirting with me?
+5. I believe the world would be better if it were run by women?
 
 # Session 3: 
+
+1. How are You ?
+1. Did you sleep well ? Do you have nightmares. Do you usually dream or just sleep like a baby ?
+
+Before I tell what is in the program for today, I want to ask you :
+1. Do you listen to the audios that I provide you ? How do you find them?
+1. Do you use you Anki ? 
+1. Did you do a summery of any book ? 
+
+
+1. What we are gonna do to day? 
+   1. You are gonna do a test, I takes only 10 mins, And it gives you a glance on you level <https://www.examenglish.com/leveltest/grammar_level_test.htm> The goal is to keep track of you level, is it increasing or not?
+   1. We are gonna have to an open discussion on two subjects : Traveling and "the video I sent you "
+   1. How you can Enhance you linked In :
+
+
+## Linked in 
+
+Analysing Your profile :
+
+1.  `open to work` symbol : Has advantages and disadvantages (pros and cons)? 
+    * Pros is it helps the recruiters to find you, based on the algorithm in Linkedin 
+    * Cons: It hurts you image it makes desperate for work 
+    * The solution is to to let the badge "open to work " tow days and remove for the 5 days .
+    * Using this technique will steel get the benefits of the algorithm and you have a nice picture .
+
+1. For the photos
+   1. It necessity to make a photo in the background. You should not left empty (the picture should )
+   1. For you personnel photo (I suggest to change it, and don't take a photo yourself, go to a photographer and take a professional photo just tell him I want a linked photo  ) and you should be smiling hhh.
+
+1. For the tile of your work, I want to put keywords related to you domain . For example: software that you work with (in general put key words of the competence  needed for the role you are searching for )
+
+1. Add the about section (includes keywords related to you domain )
+
+1. Experience 
+   * Give an example 
+   * Try to full the experience with keywords (because it the recruiters to reach you and appear in their research ). 
+
+
+1. The most important things 
+   1. You should post 2 times a week (to get engagement so that Linkedin gives you a push), and you will start getting notice 
+   *  Just post about what you are learning (either in related to you domain or any things else, what is important is to get engagement )
+   1. Make connections (you have only 200 connection), you need to follow people who are working on the companies that you are applying for. Be friends with them, and don't send a  empty request (always send a message).
+
+If you apply this after 2 Months you will notice the results 
+
+
+## Taking the test 
+
+## Discussion on the video 
+1. Being is poor is a choice ? 
+   * poor is mind set 
+   * since 2017, every changed, now their people have 
+   * do you taking action or not 
+
+1. billionaires should not exist?
+   * No should exist, because they give more value comparing to poor people 
+   * 
+1. economy is rigged?
+   * what i think is that rich people take a hight risk that's why they get hight reword (because they a business man risk his savings and he works 24 h)
+   * And for the just a simple employee they are in comfort zone (they have a specific role, specific working hours ...) that's why they are poor.
+   * low is written to encourage investment (that why their is a lot of wholes especially )
+
+1. I worried where my next meal would come from? 
+
+1. What do you think is the problem in the income that is too low or in the habits (addiction...)?
+
+1. The difference between the mentality and mindset between rich and poor?
+   * If a poor guy is paid the minimum wedge, he will put minimum effort, but rich guy will put maximum effort to get promoted
+   * Rich people they know the economic game (they save money, they invest and they take risk and they work hard and mostly they really wont to be rich ) for poor people they don't have goals they don't know the game (i mean they don't study and make search) that the difference .
+
+1. Do you think more money more problems ?
+   * I believe that problems always gonna exist either you are poor or rich, the difference is in the type of your problems and also on the impact degree of those problems. 
+
+## Open discussion about traveling 
+1. 
+
 
 ## Reading `baseball pig `
 
@@ -14,6 +121,8 @@
   * grab: to take or seize something quickly or suddenly  
   * grub: it refers to food or eating. As a verb it can also mean to dig or search for something. 
 
+
+## ALC book
 1. How to make a paper airplane (Page 160)
 
 # Session 2: 0.11.2024
